@@ -15,7 +15,7 @@
 
 ## 引用
 - 组件的引用
-	- `
+	```
 	<!-- 组件的引用（可传参） -->
 	<%
 	const website = {
@@ -24,16 +24,16 @@
 	}
 	%>
 	<%= require('../../components/header/header.ejs')({htmlWebpackPlugin,website}) %>
-	`
+	```
 - 图片的引用
-	- `<img src="${require('../../images/logo.png')}">`
+	```<img src="${require('../../images/logo.png')}">```
 
 ## 组件中的js
 如果一定要在组件中编写js代码，需要使用`window.addEventListener('load',你的函数)`，否则组件的js会比入口js和第三方库的js先执行。
 
 如果组件是在列表中循环输出的，那么函数的定义要使用const或let ，否则将执行多次。这是利用let和const不允许声明多次的特性，所以不会执行第二次。
 
-`javascript
+```javascript
 	/*function test(){
 		console.log('这是列表项组件的js')
 	}*/
@@ -44,7 +44,7 @@
 		console.log('这是列表项组件的js')
 	}
 	window.addEventListener('load',test)
-`
+```
 
 但是最好还是不要这样咯，可以写在页面的js或公共的js中。
 
