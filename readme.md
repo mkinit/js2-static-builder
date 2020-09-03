@@ -49,7 +49,7 @@
 但是最好还是不要这样咯，可以写在页面的js或公共的js中。
 
 ## 注意：
- - 项目中安装了jquery、moment是为了演示，请删除后开始你的表演。
+ - 项目中安装了jquery、moment是为了演示，请删除（包括components、view、iconfont、images、script目录中的演示文件）后开始你的表演。
  - 多级目录：需要在路由（src/route.js）声明要生成的目录名称属性：directory（属性值需要跟项目实际目录名称一致）
  - webpack.config.js中引用的 HtmlWebpackPlugin 变量虽然是大写的，但是在 ejs 文件中 中使用是 htmlWebpackPlugin。否则会出现 HtmlWebpackPlugin not defined 的报错（无论导入时是什么命名，ejs中使用都是htmlWebpackPlugin）。
  - ejs中的传参，形参和实参名称必须相同，子组件有用到的参数都是必传参数，否则会报错，项目无法运行；参数的属性是可选的。
@@ -98,10 +98,10 @@
 			- index.less：页面样式文件
 			- index.ejs：页面结构
 		- admin：后台的页面（带目录的页面）
-			- my
-				- my.js
-				- my.less
-				- my.ejs
+			- login
+				- login.js
+				- login.less
+				- login.ejs
 	- components：所有组件目录
 		- header：单个组件目录
 			- header.ejs：组件结构
