@@ -1,0 +1,50 @@
+<!-- 引用公共头部 -->
+<%= require('../../../public/header.ejs')({htmlWebpackPlugin}) %>
+
+<main>
+	<!-- 组件的引用（可传参） -->
+	<%
+	const website = {
+		title:'JS2',
+		description:'static'
+	}
+	%>
+	<%= require('../../../components/header/header.ejs')({website}) %>
+
+	<div class="js2-container-960">
+		<div class="list">
+			<%
+			const list = [
+				{
+					title:'行宫',
+					content:`
+						<p>寥落古行宫，宫花寂寞红。</p>
+						<p>白头宫女在，闲坐说玄宗。</p>
+					`
+				},{
+					title:'竹里馆',
+					content:`
+						<p>独坐幽篁里，弹琴复长啸。</p>
+						<p>深林人不知，明月来相照。</p>
+					`
+				},{
+					title:'寻隐者不遇',
+					content:`
+						<p>松下问童子，言师采药去。</p>
+						<p>只在此山中，云深不知处。</p>
+					`
+				}
+			]
+			%>
+			<% for(let i = 0; i < list.length; i++){ 
+				const data = list[i] %>
+				<%= require('../../../components/list-item/list-item.ejs')({data}) %>
+			<% } %>
+		</div>
+	</div>
+</main>
+
+<%= require('../../../components/footer/footer.ejs')() %>
+
+<!-- 引用公共底部 -->
+<%= require('../../../public/footer.ejs')() %>

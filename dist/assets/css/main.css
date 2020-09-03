@@ -1,0 +1,236 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-application {
+  background-image: url(/assets/images/sprite.png);
+  background-position: 0px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-delete {
+  background-image: url(/assets/images/sprite.png);
+  background-position: 0px -26px;
+  width: 24px;
+  height: 24px;
+}
+.icon-edit {
+  background-image: url(/assets/images/sprite.png);
+  background-position: 0px -52px;
+  width: 24px;
+  height: 24px;
+}
+.icon-layer {
+  background-image: url(/assets/images/sprite.png);
+  background-position: 0px -78px;
+  width: 24px;
+  height: 24px;
+}
+
+@font-face {font-family: "iconfont";
+  src: url(/assets/iconfont/iconfont.eot); /* IE9 */
+  src: url(/assets/iconfont/iconfont.eot#iefix) format('embedded-opentype'), 
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url(/assets/iconfont/iconfont.woff) format('woff'),
+  url(/assets/iconfont/iconfont.ttf) format('truetype'), 
+  url(/assets/images/iconfont.svg#iconfont) format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zhangdan:before {
+  content: "\e64f";
+}
+
+.icon-wode:before {
+  content: "\e64d";
+}
+
+.icon-shouye1:before {
+  content: "\e650";
+}
+
+
+html,
+body {
+  color: #666;
+  font: 15px/1.5 'Microsoft Yahei';
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1 {
+  font-size: 2.2rem;
+}
+h2 {
+  font-size: 1.92rem;
+}
+h3 {
+  font-size: 1.64rem;
+}
+h4 {
+  font-size: 1.36rem;
+}
+h5 {
+  font-size: 1.08rem;
+}
+h6 {
+  font-size: 0.8rem;
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+input,
+textarea,
+button {
+  color: #666;
+  font-size: 1rem;
+  font-family: 'Microsoft Yahei';
+  outline: none;
+  border: 1px solid #D2D2D2;
+}
+input[type="reset"],
+input[type="submit"],
+input[type="button"],
+button {
+  cursor: pointer;
+}
+::-webkit-input-placeholder {
+  color: #999;
+  font-family: 'Microsoft Yahei';
+}
+::-moz-placeholder {
+  color: #999;
+  font-family: 'Microsoft Yahei';
+}
+:-ms-input-placeholder {
+  color: #999;
+  font-family: 'Microsoft Yahei';
+}
+::-ms-input-placeholder {
+  color: #999;
+  font-family: 'Microsoft Yahei';
+}
+::placeholder {
+  color: #999;
+  font-family: 'Microsoft Yahei';
+}
+fieldset {
+  border: 1px solid #D2D2D2;
+}
+select {
+  border-color: #D2D2D2;
+}
+.icon,
+.sprite,
+.iconfont {
+  display: inline-block;
+}
+.js2-container-960 {
+  max-width: 960px;
+  margin: 0 auto;
+}
+header {
+  padding-top: 2em;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 0.5em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+nav ul li:hover .iconfont,
+nav ul li:hover a {
+  color: #4285f4;
+}
+nav ul li .iconfont {
+  margin-right: 3px;
+}
+header {
+  padding-top: 2em;
+  text-align: center;
+}
+header .header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 0.5em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+nav ul li:hover .iconfont,
+nav ul li:hover a {
+  color: #4285f4;
+}
+nav ul li .iconfont {
+  margin-right: 3px;
+}
+footer {
+  background-color: #D2D2D2;
+  padding: 2em 0;
+  text-align: center;
+}
+.list-item {
+  box-shadow: 1px 1px 5px 0 #CCC;
+  padding: 1em;
+  margin: 2em 0;
+}
+.list-item h3 .icon {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+.list-item2 {
+  box-shadow: 1px 1px 5px 0 #123456;
+  padding: 1em;
+  margin: 2em 0;
+  display: inline-block;
+}
+.list-item2 h3 .icon {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
