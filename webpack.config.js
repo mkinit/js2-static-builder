@@ -24,7 +24,7 @@ const is_production_path = production_path !== '' //判断是否有自定义打�
 let plugins = [
     new CleanWebpackPlugin(), //打包清理插件
     new MiniCssExtractPlugin({ //分离出入口样式文件
-        filename: is_production && is_production_path ? production_path + 'css/[name].css' : 'css/[name].css'
+        filename: is_production && is_production_path ? production_path + 'css/[name].[contenthash].css' : 'css/[name].[contenthash]ss'
     }),
     new SpritesmithPlugin({ //生成雪碧图和样式
         src: {
@@ -93,7 +93,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/dist/', //跟入口文件同一层级目录，如果没有指定该属性配置，webpack会自动创建一个dist目录
-        filename: is_production && is_production_path ? production_path + '/js/[name].js' : 'js/[name].js',
+        filename: is_production && is_production_path ? production_path + '/js/[name].[contenthash].js' : 'js/[name].[contenthash].js',
     },
     module: {
         rules: [{
