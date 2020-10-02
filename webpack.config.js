@@ -93,6 +93,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/dist/', //跟入口文件同一层级目录，如果没有指定该属性配置，webpack会自动创建一个dist目录
+        publicPath:'/',
         filename: is_production && is_production_path ? production_path + '/js/[name].[contenthash].js' : 'js/[name].[contenthash].js',
     },
     module: {
