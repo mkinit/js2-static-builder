@@ -24,7 +24,7 @@ const is_production_path = production_path !== '' //判断是否有自定义打�
 let plugins = [
     new CleanWebpackPlugin(), //打包清理插件
     new MiniCssExtractPlugin({ //分离出入口样式文件
-        filename: is_production && is_production_path ? production_path + 'css/[name].[contenthash].css' : 'css/[name].[contenthash]ss'
+        filename: is_production && is_production_path ? production_path + 'css/[name].[contenthash].css' : 'css/[name].[contenthash].css'
     }),
     new SpritesmithPlugin({ //生成雪碧图和样式
         src: {
