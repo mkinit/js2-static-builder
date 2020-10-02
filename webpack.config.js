@@ -1,3 +1,4 @@
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin') //引用html处理插件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') //CSS分离（不分离时是通过js动态写入html里）
 const SpritesmithPlugin = require('webpack-spritesmith') //雪碧图工具
@@ -67,6 +68,11 @@ route.forEach(item => {
 
 module.exports = {
     mode: NODE_ENV, //环境模式
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+        }
+    },
     devServer: {
         disableHostCheck: true,
         host: '0.0.0.0',
