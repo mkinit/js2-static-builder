@@ -82,7 +82,7 @@ module.exports = {
     },
     entry: {
         main: './src/entry.js', //入口文件（主js模块，引用自定义的公共库和样式入口文件）
-        ...pages_entry //页面入口文件
+        ...pages_entry //页面入口文件（多入口模式才需要）
     },
     // 提取第三方工具库
     optimization: {
