@@ -40,9 +40,5 @@
         "webpack-cli": "^3.2.3",
         "webpack-dev-server": "^3.7.2",
         "webpack-spritesmith": "^1.0.2"
-    },
-    "dependencies": {
-        "jquery": "^3.5.1",
-        "moment": "^2.27.0"
     }
 }
