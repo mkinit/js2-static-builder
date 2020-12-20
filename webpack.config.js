@@ -8,7 +8,7 @@ const route = require('./src/route').route //导入页面路由
 let pages_entry = {} //多个页面入口
 
 //项目模式，默认为多入口模式，单一入口为false
-const multiple_mode = true
+const multiple_mode = false
 
 //定义开发环境和生产环境的打包目录
 /* 自定义打包目录，所有静态资源都会打包到一个目录，根据后端目录结构设置。
@@ -75,10 +75,10 @@ module.exports = {
     },
     devServer: {
         disableHostCheck: true,
-        host: '0.0.0.0',//使用局域网IP可以打开
+        host: '0.0.0.0', //使用局域网IP可以打开
         port: 208,
-        open: 'http://localhost:208',//启动后自动打开
-        inline: true，//dev服务器模式
+        open: 'http://localhost:208', //启动后自动打开
+        inline: true //dev服务器模式
     },
     entry: {
         main: './src/entry.js', //入口文件（主js模块，引用自定义的公共库和样式入口文件）
@@ -98,7 +98,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/dist/', //跟入口文件同一层级目录，如果没有指定该属性配置，webpack会自动创建一个dist目录
-        publicPath:'/',
+        publicPath: '/',
         filename: is_production && is_production_path ? production_path + '/js/[name].[contenthash].js' : 'js/[name].[contenthash].js',
     },
     module: {

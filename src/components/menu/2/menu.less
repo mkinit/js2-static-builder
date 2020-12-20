@@ -1,12 +1,4 @@
-.c-menu-1 {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 100;
-	transition: all .3s linear;
-	background-color: #FFF;
-
+.c-menu-2 {
 	.wrap {
 		display: flex;
 		justify-content: space-between;
@@ -14,9 +6,9 @@
 	}
 
 	.logo {
-		width:116px;
-		height:50px;
-		background:url("../../../images/logo.png") center/contain;
+		img {
+			width: 120px;
+		}
 	}
 
 	.menu-list {
@@ -31,7 +23,7 @@
 				transition: all .3s linear;
 
 				&:hover {
-					border-bottom-color: @main-color;
+					border-bottom-color: @link;
 				}
 			}
 		}

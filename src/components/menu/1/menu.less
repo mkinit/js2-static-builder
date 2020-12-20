@@ -1,0 +1,39 @@
+.c-menu-1 {
+    .logo {
+        img {
+            width: 120px;
+        }
+    }
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-list {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+
+            &.current,
+            &:hover {
+                a {
+                    color: #FFF;
+                    background-color: @link;
+                }
+            }
+        }
+
+        a {
+            display: block;
+            margin: 0 .5em;
+            line-height: 2;
+            border-radius: 1em;
+            padding: 0 1.125em;
+            font-size: 1.125em;
+            transition: all .1s linear;
+        }
+    }
+}
