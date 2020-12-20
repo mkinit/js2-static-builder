@@ -5,8 +5,8 @@
 将页面的每一块元素拆分成可复用的组件，如头部、菜单、面包屑导航、列表、列表项、边栏、底部，需要时按需引用，方便网站某块区域的改版，不同组件的组合也可以快速构建成另一个网站。
 
 ## 模式
- - 单入口模式：所有js、css都会打包到一起
- - 多入口模式：各个页面的js、css分别打包引用
+ - 单入口模式：所有js、css都会打包到一起，npm引用的包除外（entry.js为入口文件）
+ - 多入口模式：各个页面的js、css分别打包引用（页面的js即入口文件）
 
 ## 命令
 - 安装项目依赖：`npm install`
@@ -49,7 +49,7 @@
 但是最好还是不要这样咯，可以写在页面的js或公共的js中。
 
 ## 注意：
- - 项目中安装了jquery、moment是为了演示，请删除（包括components、view、iconfont、images、script目录中的演示文件）后开始你的表演。
+ - 项目中安装了jquery、moment是为了演示，请删除（包括iconfont、images、script、sprite目录中的演示文件）后开始你的表演。
  - 多级目录：需要在路由（src/route.js）声明要生成的目录名称属性：directory（属性值需要跟项目实际目录名称一致）
  - webpack.config.js中引用的 HtmlWebpackPlugin 变量虽然是大写的，但是在 ejs 文件中 中使用是 htmlWebpackPlugin。否则会出现 HtmlWebpackPlugin not defined 的报错（无论导入时是什么命名，ejs中使用都是htmlWebpackPlugin）。
  - ejs中的传参，形参和实参名称必须相同，子组件有用到的参数都是必传参数，否则会报错，项目无法运行；参数的属性是可选的。
