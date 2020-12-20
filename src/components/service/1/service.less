@@ -1,0 +1,35 @@
+.c-service-1{
+	.items{
+		margin-top:1em;
+		display: flex;
+		.item{
+			width:25%;
+			cursor:pointer;
+			&:hover{
+				background-color:@main-color;
+				img{
+					opacity:.15;
+				}
+				.item-text{
+					color:#FFF;
+				}
+			}
+		}
+		.item-text{
+			height:240px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items:center;
+			font-weight: bold;
+			color:@second-color;
+			.title{
+				font-size:1.75em;
+			}
+			.en{
+				font-size:1.5em;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

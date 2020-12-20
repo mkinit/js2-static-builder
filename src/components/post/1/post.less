@@ -1,0 +1,48 @@
+.c-post-1{
+	margin:3em 0;
+	.wrap{
+		background-color:#FFF;
+		padding:3em 6em;
+		box-sizing: border-box;
+	}
+	.title{
+		font-size:1.75em;
+		font-weight: bold;
+		border-bottom:1px solid @bg;
+		padding-bottom:.5em;
+	}
+	.post-info{
+		padding-top:.5em;
+		font-size:12px;
+		color:@second-font;
+	}
+	.content{
+		margin-top:3em;
+		p{
+			text-indent: 2em;
+		}
+	}
+	.navigation{
+		overflow: hidden;
+		font-size:.85em;
+		border-top:1px solid @bg;
+		margin-top:3em;
+		padding-top:3em;
+		a{
+			display: block;
+			width:49%;
+			.ellipsis();
+			color:@second-font;
+			&:hover{
+				color:@hover;
+			}
+		}
+		.previous{
+			float: left;
+		}
+		.next{
+			float:right;
+			text-align: right;
+		}
+	}
+}

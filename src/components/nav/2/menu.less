@@ -1,0 +1,39 @@
+.c-menu-1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	transition: all .3s linear;
+	background-color: #FFF;
+
+	.wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		width:116px;
+		height:50px;
+		background:url("../../../images/logo.png") center/contain;
+	}
+
+	.menu-list {
+		ul {
+			display: flex;
+
+			a {
+				font-size: 1.075em;
+				display: inline-block;
+				padding: 1em 1.25em;
+				border-bottom: 3px solid transparent;
+				transition: all .3s linear;
+
+				&:hover {
+					border-bottom-color: @main-color;
+				}
+			}
+		}
+	}
+}

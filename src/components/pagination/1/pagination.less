@@ -1,0 +1,22 @@
+.c-pagination-1{
+	text-align:center;
+	padding-bottom:6em;
+	margin-top:3em;
+	.page-num{
+		cursor:pointer;
+		display: inline-block;
+		padding:3px 11px;
+		border-radius: 4px;
+		font-weight: bold;
+		color:@second-font;
+		font-size:13px;
+		transition: all .3s linear;
+		&.current,&:hover{
+			background-color:@main-color;
+			color:#FFF;
+		}
+		&.current{
+			cursor:default;
+		}
+	}
+}

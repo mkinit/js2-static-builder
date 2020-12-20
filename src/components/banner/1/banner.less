@@ -1,0 +1,36 @@
+.c-banner-1 {
+	position: relative;
+
+	img {
+		filter: brightness(60%);
+	}
+	.banner-mask{
+		width:100%;
+		height:100%;
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		background-color:rgba(41,59,79,.6);
+	}
+
+	.banner-text {
+		display: inline-block;
+		position:absolute;
+		top:30%;
+		left:10%;
+		color: #FFF;
+
+		.title {
+			display: inline-block;
+			font-size: 3em;
+			font-weight: bold;
+			border-bottom:5px solid @main-color;
+		}
+
+		.desc {
+			margin-top:.5em;
+			font-size: 2em;
+		}
+	}
+}

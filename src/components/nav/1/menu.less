@@ -1,0 +1,40 @@
+.c-menu {
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    z-index   : 100;
+    background-color:#FFF;
+
+    .wrap {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding:1.5em 0;
+    }
+
+    .menu-list {
+        display        : flex;
+        justify-content: flex-end;
+
+        li {
+
+            &.current,
+            &:hover {
+                a {
+                    color           : #FFF;
+                    background-color: @main-color;
+                }
+            }
+        }
+
+        a {
+            display      : block;
+            margin       : 0 .5em;
+            line-height  : 2;
+            border-radius: 1em;
+            padding      : 0 1.125em;
+            font-size:1.125em;
+        }
+    }
+}
