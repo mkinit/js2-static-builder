@@ -86,7 +86,6 @@ module.exports = {
     },
     // 提取第三方工具库
     optimization: {
-        // 找到chunk中共享的模块,取出来生成单独的chunk
         splitChunks: {
             chunks: "initial", // async表示抽取异步模块，all表示对所有模块生效，initial表示对同步模块生效
             cacheGroups: {
