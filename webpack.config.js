@@ -75,10 +75,10 @@ module.exports = {
     },
     devServer: {
         disableHostCheck: true,
-        host: '0.0.0.0',
+        host: '0.0.0.0',//使用局域网IP可以打开
         port: 208,
-        open: 'http://localhost:208',
-        inline: true
+        open: 'http://localhost:208',//启动后自动打开
+        inline: true，//dev服务器模式
     },
     entry: {
         main: './src/entry.js', //入口文件（主js模块，引用自定义的公共库和样式入口文件）
