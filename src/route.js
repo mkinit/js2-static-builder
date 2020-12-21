@@ -29,6 +29,9 @@ const demo = [{
 }, {
 	name: 'bottom',
 	title: '底部示例',
+}, {
+	name: 'list',
+	title: '内容列表示例',
 }]
 
 //批量写入属性
