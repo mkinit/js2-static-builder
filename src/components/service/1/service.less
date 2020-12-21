@@ -1,12 +1,11 @@
 .c-service-1{
 	.items{
-		margin-top:1em;
 		display: flex;
 		.item{
-			width:25%;
+			width:320px;
 			cursor:pointer;
 			&:hover{
-				background-color:@main-color;
+				background-color:@link;
 				img{
 					opacity:.15;
 				}
@@ -16,19 +15,21 @@
 			}
 		}
 		.item-text{
-			height:240px;
+			height:20vw;
+			max-height:256px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items:center;
 			font-weight: bold;
-			color:@second-color;
+			color:@second-font;
 			.title{
 				font-size:1.75em;
 			}
-			.en{
+			.desc{
 				font-size:1.5em;
 				text-transform: uppercase;
+				line-height: 2;
 			}
 		}
 	}

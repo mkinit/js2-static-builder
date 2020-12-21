@@ -10,10 +10,25 @@ const demo = [{
 	title: '菜单示例',
 }, {
 	name: 'banner',
-	title: 'banner示例',
+	title: '横幅/轮播图示例',
 }, {
 	name: 'about',
-	title: 'about示例',
+	title: '关于我们示例',
+}, {
+	name: 'culture',
+	title: '公司文化示例',
+}, {
+	name: 'friend-link',
+	title: '友情链接示例',
+}, {
+	name: 'pagination',
+	title: '分页示例',
+}, {
+	name: 'service',
+	title: '公司业务示例',
+}, {
+	name: 'bottom',
+	title: '底部示例',
 }]
 
 //批量写入属性

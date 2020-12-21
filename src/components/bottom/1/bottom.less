@@ -1,7 +1,7 @@
 .c-bottom-1 {
-	background-color: @second-color;
+	background-color: @second-font;
 	color: #FFF;
-	padding-top: 4em;
+	padding: 4em 1em 2em;
 
 	a {
 		color: #FFF;
@@ -17,9 +17,10 @@
 			font-weight: bold;
 			.en{
 				font-size:.5em;
-				color:@second-font;
+				color:#FFF;
 				text-transform: uppercase;
 				font-weight: normal;
+				line-height:2;
 			}
 		}
 
@@ -29,9 +30,9 @@
 			margin-top:2em;
 		}
 
-		.add {
-			color: @second-font;
+		.address {
 			font-size: .85em;
+			line-height: 2;
 		}
 
 		.middle {
@@ -41,6 +42,7 @@
 				margin: 0 2em;
 				.title{
 					font-size:1.125em;
+					font-weight: bold;
 				}
 
 				ul {
@@ -48,13 +50,9 @@
 
 					li {
 						a {
-							color: @second-font;
+							color: #FFF;
 							font-size: .85em;
 							line-height: 2em;
-
-							&:hover {
-								color: #FFF;
-							}
 						}
 					}
 				}
@@ -65,6 +63,7 @@
 			display: flex;
 			.qrcode{
 				text-align:center;
+				line-height: 2;
 				&:nth-child(2){
 					margin-left:2em;
 				}
@@ -80,9 +79,5 @@
 		padding:1.5em 0;
 		font-size:.85em;
 		text-align:center;
-		color:@second-font;
-		a{
-			color:@second-font;
-		}
 	}
 }
