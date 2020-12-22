@@ -32,6 +32,9 @@ const demo = [{
 }, {
 	name: 'list',
 	title: '内容列表示例',
+}, {
+	name: 'post',
+	title: '内容页示例',
 }]
 
 //批量写入属性
