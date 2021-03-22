@@ -17,14 +17,14 @@ const multiple_mode = false
  * 各种资源默认是有目录的，图片：images；样式：css；模块：js;字体图标：iconfont；
  */
 
-const resource_path = ''//自定义资源打包目录
+const resource_path = 'assets'//自定义资源打包目录
 
 const is_production = NODE_ENV === 'production' //判断是否生产环境
 
 let plugins = [
     new CleanWebpackPlugin(), //打包清理插件
     new MiniCssExtractPlugin({ //分离出入口样式文件
-        filename: 'css/[name].[contenthash].css'
+        filename: resource_path?`${resource_path}/css/[name].[contenthash].css`:'css/[name].[contenthash].css'
     }),
     new SpritesmithPlugin({ //生成雪碧图和样式
         src: {
@@ -98,7 +98,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist/', //跟入口文件同一层级目录，如果没有指定该属性配置，webpack会自动创建一个dist目录
         publicPath: '/',
-        filename:  'js/[name].[contenthash].js',
+        filename:resource_path?`${resource_path}/js/[name].[contenthash].js`:'js/[name].[contenthash].js',
     },
     module: {
         rules: [{
@@ -119,8 +119,8 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: 'images', //资源的打包目录，相对于dist目录
-                        publicPath: '/images/', //所有引用的图片路径最终会被替换为这个
+                        outputPath: resource_path?`${resource_path}/images`:'images', //资源的打包目录，相对于dist目录
+                        publicPath: resource_path?`/${resource_path}/images`:'/images', //所有引用的图片路径最终会被替换为这个
                     }
                 }]
             },
@@ -130,8 +130,8 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: 'iconfont', //资源的打包目录，相对于dist目录
-                        publicPath: '/iconfont/', //所有引用的资源路径最终会被替换为这个
+                        outputPath: resource_path?`${resource_path}/iconfont`:'iconfont', //资源的打包目录，相对于dist目录
+                        publicPath: resource_path?`/${resource_path}/iconfont`:'/iconfont', //所有引用的资源路径最终会被替换为这个
                     }
                 }]
             },
