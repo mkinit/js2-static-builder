@@ -10,13 +10,6 @@ let pages_entry = {} //多个页面入口
 //项目模式，默认为多入口模式，单一入口为false
 const multiple_mode = false
 
-//定义生产环境的打包目录
-/* 自定义打包目录，所有静态资源都会打包到一个目录，根据后端目录结构设置。
- * 比如ThinkPHP的静态资源都存放在“public/static/”目录下，自定义打包后后端就不用去批量替换；不需要自定义留空即可。
- * 目录名称前不能有斜杠，名称后必须要有斜杠，如：“assets/”。
- * 各种资源默认是有目录的，图片：images；样式：css；模块：js;字体图标：iconfont；
- */
-
 const resource_path = 'assets'//自定义资源打包目录
 
 const is_production = NODE_ENV === 'production' //判断是否生产环境
