@@ -10,22 +10,21 @@ let pages_entry = {} //多个页面入口
 //项目模式，默认为多入口模式，单一入口为false
 const multiple_mode = false
 
-//定义开发环境和生产环境的打包目录
+//定义生产环境的打包目录
 /* 自定义打包目录，所有静态资源都会打包到一个目录，根据后端目录结构设置。
- * 比如ThinkPHP的静态资源都存放在“public\static\”目录下，自定义打包后后端就不用去批量替换；不需要自定义留空即可。
+ * 比如ThinkPHP的静态资源都存放在“public/static/”目录下，自定义打包后后端就不用去批量替换；不需要自定义留空即可。
  * 目录名称前不能有斜杠，名称后必须要有斜杠，如：“assets/”。
  * 各种资源默认是有目录的，图片：images；样式：css；模块：js;字体图标：iconfont；
  */
-const production_path = 'assets/'
+
+const resource_path = ''//自定义资源打包目录
 
 const is_production = NODE_ENV === 'production' //判断是否生产环境
-
-const is_production_path = production_path !== '' //判断是否有自定义打包目录
 
 let plugins = [
     new CleanWebpackPlugin(), //打包清理插件
     new MiniCssExtractPlugin({ //分离出入口样式文件
-        filename: is_production && is_production_path ? production_path + 'css/[name].[contenthash].css' : 'css/[name].[contenthash].css'
+        filename: 'css/[name].[contenthash].css'
     }),
     new SpritesmithPlugin({ //生成雪碧图和样式
         src: {
@@ -99,7 +98,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist/', //跟入口文件同一层级目录，如果没有指定该属性配置，webpack会自动创建一个dist目录
         publicPath: '/',
-        filename: is_production && is_production_path ? production_path + '/js/[name].[contenthash].js' : 'js/[name].[contenthash].js',
+        filename:  'js/[name].[contenthash].js',
     },
     module: {
         rules: [{
@@ -120,8 +119,8 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: is_production && is_production_path ? '/' + production_path + 'images/' : './images/', //资源的打包目录，相对于dist目录
-                        publicPath: is_production && is_production_path ? '/' + production_path + 'images/' : '/images/', //所有引用的图片路径最终会被替换为这个
+                        outputPath: 'images', //资源的打包目录，相对于dist目录
+                        publicPath: '/images/', //所有引用的图片路径最终会被替换为这个
                     }
                 }]
             },
@@ -131,8 +130,8 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: is_production && is_production_path ? '/' + production_path + 'iconfont/' : '/iconfont/', //资源的打包目录，相对于dist目录
-                        publicPath: is_production && is_production_path ? '/' + production_path + 'iconfont/' : '/iconfont/', //所有引用的资源路径最终会被替换为这个
+                        outputPath: 'iconfont', //资源的打包目录，相对于dist目录
+                        publicPath: '/iconfont/', //所有引用的资源路径最终会被替换为这个
                     }
                 }]
             },
