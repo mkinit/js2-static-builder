@@ -6,6 +6,12 @@ const front = [{
 
 //二级页面（directory属性为打包后的目录，没有该属性默认打包在根目录）
 const demo = [{
+	name: 'iconfont',
+	title: '字体图标示例',
+},{
+	name: 'sprite',
+	title: '精灵图示例',
+},{
 	name: 'menu',
 	title: '菜单示例',
 }, {

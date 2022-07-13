@@ -1,11 +1,12 @@
 * {
 	box-sizing: border-box;
+	word-break: break-all;
 }
 
 html,
 body {
 	color: @font;
-	font: 15px/1 @font-family;
+	font: 14px/1 @font-family;
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
@@ -22,32 +23,33 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-	margin: 0;
+h6,
+p {
+	margin: .5em 0;
 }
 
 h1 {
-	font-size: 2.8rem;
-}
-
-h2 {
 	font-size: 2rem;
 }
 
-h3 {
+h2 {
 	font-size: 1.5rem;
 }
 
-h4 {
+h3 {
 	font-size: 1.25rem;
 }
 
-h5 {
+h4 {
 	font-size: 1rem;
 }
 
+h5 {
+	font-size: .75rem;
+}
+
 h6 {
-	font-size: .8rem;
+	font-size: .5rem;
 }
 
 img {
@@ -57,11 +59,11 @@ img {
 }
 
 a {
-	color: @font;
+	color: @primary;
 	text-decoration: none;
 
-	&:focus {
-		outline: none;
+	&:hover {
+		color: @secondary;
 	}
 }
 
@@ -71,11 +73,9 @@ textarea {
 	display: block;
 }
 
-textarea {
-	width: 100%;
-}
-
-input,
+input[type="text"],
+input[type="password"],
+input[type="number"],
 textarea,
 button,
 select {
@@ -83,23 +83,49 @@ select {
 	font-size: 1rem;
 	font-family: @font-family;
 	outline: none;
-	border: 1px solid @bg;
+	border: 1px solid @border;
+	line-height: 30px;
+	padding: 0 .5em;
+	margin: 0;
+	vertical-align: middle;
+}
+
+textarea {
+	width: 100%;
+	line-height: 1.5;
+	padding:.5em;
+}
+
+input[type="checkbox"] {
+	margin-right: 5px;
 }
 
 input[type="reset"],
 input[type="submit"],
 input[type="button"],
 button {
+	min-width: 4em;
 	cursor: pointer;
+	padding: 0 1em;
+	line-height: 32px;
+	background-color: @primary;
+	color: @invert;
+	vertical-align: middle;
+	outline: none;
+	border: none;
+
+	&:hover {
+		opacity: .8;
+	}
 }
 
 ::placeholder {
-	color: @second-font;
+	color: @font-second;
 	font-family: @font-family;
 }
 
 select {
-	border-color: @bg;
+	border-color: @border;
 
 	&:focus {
 		outline: none;
@@ -107,7 +133,7 @@ select {
 }
 
 fieldset {
-	border: 1px solid @bg;
+	border: 1px solid @border;
 }
 
 /* 表格 */

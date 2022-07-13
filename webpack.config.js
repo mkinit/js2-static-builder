@@ -10,14 +10,14 @@ let pages_entry = {} //多个页面入口
 //项目模式，默认为多入口模式，单一入口为false
 const multiple_mode = false
 
-const resource_path = 'assets'//自定义资源打包目录
+const resource_path = 'assets' //自定义资源打包目录
 
 const is_production = NODE_ENV === 'production' //判断是否生产环境
 
 let plugins = [
     new CleanWebpackPlugin(), //打包清理插件
     new MiniCssExtractPlugin({ //分离出入口样式文件
-        filename: resource_path?`${resource_path}/css/[name].[contenthash].css`:'css/[name].[contenthash].css'
+        filename: resource_path ? `${resource_path}/css/[name].[contenthash].css` : 'css/[name].[contenthash].css'
     }),
     new SpritesmithPlugin({ //生成雪碧图和样式
         src: {
@@ -26,7 +26,29 @@ let plugins = [
         },
         target: { //最终生成的雪碧图路径
             image: './src/sprite/sprite.png',
-            css: './src/sprite/sprite.css'
+            css: [
+                [
+                    path.resolve('./src/sprite/sprite.css'), {
+                        format: 'sprite_template'
+                    }
+                ]
+            ]
+        },
+        customTemplates: {
+            'sprite_template': data => {
+                var shared = '.sprite { background-image: url(I) }'
+                    .replace('I', data.sprites[0].image)
+                var perSprite = data.sprites.map(function(sprite) {
+                    return '.sprite-N { width: Wpx; height: Hpx; background-position: Xpx Ypx; }'
+                        .replace('N', sprite.name)
+                        .replace('W', sprite.width)
+                        .replace('H', sprite.height)
+                        .replace('X', sprite.offset_x)
+                        .replace('Y', sprite.offset_y)
+                }).join('\n')
+                console.log(shared + '\n' + perSprite)
+                return shared + '\n' + perSprite
+            },
         },
         apiOptions: {
             cssImageRef: "./sprite.png" //最终的雪碧图地址（file-loader会把生成后的图片进行资源打包），相对于打包后的css路径
@@ -68,8 +90,8 @@ module.exports = {
     devServer: {
         disableHostCheck: true,
         host: '0.0.0.0', //使用局域网IP可以打开
-        port: 208,
-        open: 'http://localhost:208', //启动后自动打开
+        port: 9028,
+        open: 'http://localhost:9028', //启动后自动打开
         inline: true //dev服务器模式
     },
     entry: {
@@ -91,7 +113,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist/', //跟入口文件同一层级目录，如果没有指定该属性配置，webpack会自动创建一个dist目录
         publicPath: '/',
-        filename:resource_path?`${resource_path}/js/[name].[contenthash].js`:'js/[name].[contenthash].js',
+        filename: resource_path ? `${resource_path}/js/[name].[contenthash].js` : 'js/[name].[contenthash].js',
     },
     module: {
         rules: [{
@@ -112,8 +134,8 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: resource_path?`${resource_path}/images`:'images', //资源的打包目录，相对于dist目录
-                        publicPath: resource_path?`/${resource_path}/images`:'/images', //所有引用的图片路径最终会被替换为这个
+                        outputPath: resource_path ? `${resource_path}/images` : 'images', //资源的打包目录，相对于dist目录
+                        publicPath: resource_path ? `/${resource_path}/images` : '/images', //所有引用的图片路径最终会被替换为这个
                     }
                 }]
             },
@@ -123,8 +145,8 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: resource_path?`${resource_path}/iconfont`:'iconfont', //资源的打包目录，相对于dist目录
-                        publicPath: resource_path?`/${resource_path}/iconfont`:'/iconfont', //所有引用的资源路径最终会被替换为这个
+                        outputPath: resource_path ? `${resource_path}/iconfont` : 'iconfont', //资源的打包目录，相对于dist目录
+                        publicPath: resource_path ? `/${resource_path}/iconfont` : '/iconfont', //所有引用的资源路径最终会被替换为这个
                     }
                 }]
             },
