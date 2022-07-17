@@ -2,19 +2,34 @@
 <%= require('@/public/header.ejs')({htmlWebpackPlugin}) %>
 
 <div style="padding-left:1em;">
-	<p>字体图标示例：<a target="_blank" href="/demo/iconfont.html">/demo/iconfont.html</a></p>
-	<p>精灵图示例：<a target="_blank" href="/demo/sprite.html">/demo/sprite.html</a></p>
-	<p>菜单示例：<a target="_blank" href="/demo/menu.html">/demo/menu.html</a></p>
-	<p>banner示例：<a target="_blank" href="/demo/banner.html">/demo/banner.html</a></p>
-	<p>关于我们示例：<a target="_blank" href="/demo/about.html">/demo/about.html</a></p>
-	<p>公司文化示例：<a target="_blank" href="/demo/culture.html">/demo/culture.html</a></p>
-	<p>友情链接示例：<a target="_blank" href="/demo/friend-link.html">/demo/friend-link.html</a></p>
-	<p>分页示例：<a target="_blank" href="/demo/pagination.html">/demo/pagination.html</a></p>
-	<p>公司业务示例：<a target="_blank" href="/demo/service.html">/demo/service.html</a></p>
-	<p>底部示例：<a target="_blank" href="/demo/bottom.html">/demo/bottom.html</a></p>
-	<p>内容列表示例：<a target="_blank" href="/demo/list.html">/demo/list.html</a></p>
-	<p>内容页示例：<a target="_blank" href="/demo/post.html">/demo/post.html</a></p>
+	<h3>组件示例</h3>
+	<a class="item" target="_blank" href="/demo/iconfont.html">字体图标</a>
+	<a class="item" target="_blank" href="/demo/sprite.html">精灵图</a>
+	<a class="item" target="_blank" href="/demo/menu.html">菜单</a>
+	<a class="item" target="_blank" href="/demo/banner.html">轮播图</a>
+	<a class="item" target="_blank" href="/demo/cover.html">顶部横幅</a>
+	<a class="item" target="_blank" href="/demo/crumbs.html">面包屑导航</a>
+	<a class="item" target="_blank" href="/demo/guestbook-form.html">留言表单</a>
+	<a class="item" target="_blank" href="/demo/about.html">关于我们</a>
+	<a class="item" target="_blank" href="/demo/culture.html">公司文化</a>
+	<a class="item" target="_blank" href="/demo/friend-link.html">友情链接</a>
+	<a class="item" target="_blank" href="/demo/pagination.html">分页</a>
+	<a class="item" target="_blank" href="/demo/service.html">公司业务</a>
+	<a class="item" target="_blank" href="/demo/bottom.html">底部</a>
+	<a class="item" target="_blank" href="/demo/post-list.html">内容列表</a>
+	<a class="item" target="_blank" href="/demo/product-list.html">产品列表</a>
+	<a class="item" target="_blank" href="/demo/post.html">内容详情</a>
+	<a class="item" target="_blank" href="/demo/sidebar.html">边栏</a>
+	<a class="item" target="_blank" href="/demo/sidebar-tool.html">边栏工具</a>
 </div>
-
+<style>
+	.item{
+		display: inline-block;
+		padding:.5em .75em;
+		margin:.5em;
+		border-radius:8px;
+		box-shadow: 0 0 8px #CCC;
+	}
+</style>
 <!-- 引用公共底部 -->
 <%= require('@/public/footer.ejs')() %>

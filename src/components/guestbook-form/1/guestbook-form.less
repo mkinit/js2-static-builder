@@ -1,0 +1,40 @@
+.c-guestbook-form-1 {
+	padding: 1em 0 2em;
+
+	.form {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		.item {
+			flex: 1;
+			margin: 0 1em;
+
+			.btn-submit {
+				width: 100%;
+			}
+
+			&.name,
+			&.button {
+				flex: .5;
+			}
+
+			&.content {
+				flex: 1.5;
+			}
+
+			input {
+				width: 100%;
+				background-color: unset;
+				border-radius: 4px;
+				color: @invert;
+			}
+
+			.input-title {
+				font-size: 1.2em;
+				margin-bottom: .5em;
+			}
+
+		}
+	}
+}

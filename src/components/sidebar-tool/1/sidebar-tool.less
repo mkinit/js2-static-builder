@@ -1,0 +1,61 @@
+.c-sidebar-tool-1{
+	position:fixed;
+	z-index:100;
+	right:0;
+	bottom:10%;
+	width:44px;
+	.item{
+		background-color: @font;
+		margin:1px 0;
+		cursor: pointer;
+		color:@invert;
+		padding:0 6px;
+		white-space: nowrap;
+		transition: all .5s linear;
+		position:relative;
+		left:0;
+		transform: translateX(0);
+		width:max-content;
+		a{
+			color:@invert;
+		}
+		&:hover{
+			background-color: @primary;
+		}
+		.text{
+			margin-left:8px;
+		}
+		.icon{
+			margin:6px 0;
+		}
+	}
+	.stretch{
+		&:hover{
+			transform: translateX(calc(-100% + 46px));
+		}
+	}
+	.show-img{
+		position: relative;
+		&:hover{
+			.img-box{
+				display: flex;
+			}
+		}
+		.img-box{
+			border:1px solid @border;
+			width:150px;
+			position:absolute;
+			left:-150px;
+			bottom:0;
+			background-color: @invert;
+			padding:10px;
+			text-align:center;
+			color:@font;
+			display: none;
+			flex-direction:column-reverse;
+			.text{
+				margin-top:5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.c-post-list-1 {
+	.list-title {
+		text-align: center;
+		padding: 3em 0 1.5em;
+		font-size: 1.5em;
+		font-weight: bold;
+		.description{
+			font-size: .75em;
+			font-weight: normal;
+			color:@primary;
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		li{
+			width:47%;
+			margin:0 1.5% 2em;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom:2em;
+			box-shadow: 0 0 5px @border;
+			border-radius: 4px;
+			padding:1em;
+			.post-title{
+				font-size:1.375em;
+				font-weight: bold;
+			}
+			.info{
+				padding:.5em 0;
+				.date{
+					color:@font-second;
+				}
+			}
+			.thumbnail{
+				width:37%;
+			}
+			.content-wrap{
+				width:59%;
+			}
+		}
+	}
+	.bottom{
+		text-align:center;
+	}
+
+}

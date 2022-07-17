@@ -1,7 +1,9 @@
 .icon,
 .sprite,
-.iconfont {
+.iconfont,
+.dashicons {
 	display: inline-block;
+	vertical-align: middle;
 }
 
 //居中容器
@@ -30,4 +32,13 @@
 		font-size:1.75em;
 		line-height: 1.5;
 	}
+}
+
+//单行文本溢出
+.js2-text-ellipsis {
+	max-width: 100%;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }

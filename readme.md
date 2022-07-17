@@ -25,6 +25,10 @@
 	%>
 	<%= require('../../components/header/header.ejs')({htmlWebpackPlugin,website}) %>
 	```
+ - HtmlWebpackPlugin组件传参注意
+ webpack.config.js中引用的 HtmlWebpackPlugin 变量虽然是大写的，但是在 ejs 文件中 中使用是 htmlWebpackPlugin。否则会出现 HtmlWebpackPlugin not defined 的报错（无论导入时是什么命名，ejs中使用都是htmlWebpackPlugin）。
+ - ejs中的传参，形参和实参名称必须相同，子组件有用到的参数都是必传参数，否则会报错，项目无法运行；参数的属性是可选的。
+ 	- 比如组件中使用了`<%= website.title %>`输出标题，但是传参时website没有title属性，输出为空，这是可以的。但是一定要传website参数
 - 图片的引用
 	```<img src="${require('../../images/logo.png')}">```
 
@@ -51,9 +55,6 @@
 ## 注意：
  - 项目中安装了jquery、moment是为了演示，请删除（包括iconfont、images、script、sprite目录中的演示文件）后开始你的表演。
  - 多级目录：需要在路由（src/route.js）声明要生成的目录名称属性：directory（属性值需要跟项目实际目录名称一致）
- - webpack.config.js中引用的 HtmlWebpackPlugin 变量虽然是大写的，但是在 ejs 文件中 中使用是 htmlWebpackPlugin。否则会出现 HtmlWebpackPlugin not defined 的报错（无论导入时是什么命名，ejs中使用都是htmlWebpackPlugin）。
- - ejs中的传参，形参和实参名称必须相同，子组件有用到的参数都是必传参数，否则会报错，项目无法运行；参数的属性是可选的。
- 	- 比如组件中使用了`<%= website.title %>`输出标题，但是传参时website没有title属性，输出为空，这是可以的。但是一定要传website参数
  - 打包后所有资源都是绝对路径，无法直接打开预览（不支持file://），需要服务器（本里预览推荐使用：live-server）。
  - webpack.config.js(包括导入模块)修改后需要重新启动项目
  - 首次放入图标生成精灵图时，需要重新启动项目
