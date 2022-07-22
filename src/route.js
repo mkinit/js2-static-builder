@@ -6,60 +6,75 @@ const front = [{
 
 //二级页面（directory属性为打包后的目录，没有该属性默认打包在根目录）
 const demo = [{
-	name: 'iconfont',
-	title: '字体图标示例',
-}, {
-	name: 'sprite',
-	title: '精灵图示例',
-}, {
-	name: 'menu',
-	title: '菜单示例',
-}, {
-	name: 'banner',
-	title: '横幅/轮播图示例',
-}, {
-	name: 'cover',
-	title: '单页顶部横幅示例',
-}, {
-	name: 'crumbs',
-	title: '面包屑导航示例',
-}, {
-	name: 'guestbook-form',
-	title: '留言表单示例',
-}, {
-	name: 'about',
-	title: '关于我们示例',
-}, {
-	name: 'culture',
-	title: '公司文化示例',
-}, {
-	name: 'friend-link',
-	title: '友情链接示例',
-}, {
-	name: 'pagination',
-	title: '分页示例',
-}, {
-	name: 'service',
-	title: '公司业务示例',
-}, {
-	name: 'bottom',
-	title: '底部示例',
-}, {
-	name: 'post-list',
-	title: '内容列表示例',
-},  {
-	name: 'product-list',
-	title: '产品列表示例',
-},{
-	name: 'post',
-	title: '内容页示例',
-},{
-	name: 'sidebar',
-	title: '边栏示例',
-},{
-	name: 'sidebar-tool',
-	title: '边栏工具示例',
-}]
+		name: 'iconfont',
+		title: '字体图标示例',
+	}, {
+		name: 'sprite',
+		title: '精灵图示例',
+	},
+	//基本页面组件
+	{
+		name: 'menu',
+		title: '菜单示例',
+	}, {
+		name: 'banner',
+		title: '横幅/轮播图示例',
+	}, {
+		name: 'cover',
+		title: '单页顶部横幅示例',
+	}, {
+		name: 'crumbs',
+		title: '面包屑导航示例',
+	}, {
+		name: 'friend-link',
+		title: '友情链接示例',
+	}, {
+		name: 'pagination',
+		title: '分页示例',
+	}, {
+		name: 'bottom',
+		title: '底部示例',
+	}, {
+		name: 'post-list',
+		title: '内容列表示例',
+	}, {
+		name: 'product-list',
+		title: '产品列表示例',
+	}, {
+		name: 'post',
+		title: '内容页示例',
+	}, {
+		name: 'sidebar',
+		title: '边栏示例',
+	}, {
+		name: 'sidebar-tool',
+		title: '边栏工具示例',
+	},
+	//商务网站组件
+	{
+		name: 'about',
+		title: '关于我们示例',
+	}, {
+		name: 'culture',
+		title: '公司文化示例',
+	},
+	{
+		name: 'service',
+		title: '公司业务示例',
+	}, {
+		name: 'client',
+		title: '合作客户示例',
+	},
+	//其他组件
+	{
+		name: 'guestbook-form',
+		title: '留言表单示例',
+	},
+	{
+		name: 'login-register-form',
+		title: '登录注册表单示例',
+	}
+]
 
 //批量写入属性
 demo.forEach(item => {

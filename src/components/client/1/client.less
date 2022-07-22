@@ -1,0 +1,22 @@
+.c-client-1 {
+	.items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 1em;
+
+		.item {
+			width: 16%;
+
+			img {
+				filter: grayscale(100%);
+			}
+
+			&:hover {
+				img {
+					filter: grayscale(0);
+				}
+			}
+		}
+	}
+}

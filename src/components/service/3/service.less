@@ -1,0 +1,52 @@
+.c-service-3 {
+	background-color: rgba(@font, .82);
+
+	.items {
+		display: flex;
+		justify-content: space-around;
+
+		.item {
+			text-align: center;
+			color: @invert;
+			font-size: 1.25em;
+			line-height: 1.8;
+
+			.icon {
+				width: 100px;
+				border: 1px solid @invert;
+				padding: 20px;
+				border-radius: 50%;
+				position: relative;
+				transition: all .2s linear;
+
+				&:hover {
+					transform: scale(.7);
+					&::after {
+						width: 150px;
+						height: 150px;
+						box-shadow: 0 0 10px 10px @invert;
+					}
+				}
+
+				&::after {
+					display: block;
+					content: "";
+					width: 100px;
+					height: 100px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 10;
+					border-radius: 50%;
+					transition: all .2s linear;
+					
+				}
+			}
+
+			.title {
+				margin-top: 1em;
+			}
+		}
+	}
+}
