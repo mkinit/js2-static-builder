@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+}
+html,
+body {
+  color: #555;
+  font: 14px/1 Microsoft Yahei;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0.5em 0;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.75rem;
+}
+h6 {
+  font-size: 0.5rem;
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+a:hover {
+  color: #e73a74;
+}
+/*表单元素*/
+label,
+textarea {
+  display: block;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+button,
+select {
+  color: #555;
+  font-size: 1rem;
+  font-family: Microsoft Yahei;
+  outline: none;
+  border: 1px solid #DDD;
+  line-height: 30px;
+  padding: 0 0.5em;
+  margin: 0;
+  vertical-align: middle;
+}
+textarea {
+  width: 100%;
+  line-height: 1.5;
+  padding: 0.5em;
+}
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+input[type="reset"],
+input[type="submit"],
+input[type="button"],
+button {
+  min-width: 4em;
+  cursor: pointer;
+  padding: 0 1em;
+  line-height: 32px;
+  background-color: #4183c4;
+  color: #FFF;
+  vertical-align: middle;
+  outline: none;
+  border: none;
+}
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+  opacity: 0.8;
+}
+::-webkit-input-placeholder {
+  color: rgba(153, 153, 153, 0.6);
+  font-family: Microsoft Yahei;
+}
+::-moz-placeholder {
+  color: rgba(153, 153, 153, 0.6);
+  font-family: Microsoft Yahei;
+}
+:-ms-input-placeholder {
+  color: rgba(153, 153, 153, 0.6);
+  font-family: Microsoft Yahei;
+}
+::-ms-input-placeholder {
+  color: rgba(153, 153, 153, 0.6);
+  font-family: Microsoft Yahei;
+}
+::placeholder {
+  color: rgba(153, 153, 153, 0.6);
+  font-family: Microsoft Yahei;
+}
+select {
+  border-color: #DDD;
+}
+select:focus {
+  outline: none;
+}
+fieldset {
+  border: 1px solid #DDD;
+}
+/* 表格 */
+table {
+  background-color: #f5f5f5;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #555;
+}
+.icon,
+.sprite,
+.iconfont,
+.dashicons {
+  display: inline-block;
+  vertical-align: middle;
+}
+[class^='c-'] {
+  padding: 1em 0;
+}
+.js2-center-wrap {
+  margin: 0 auto;
+}
+.js2-center-wrap.w1280 {
+  max-width: 1280px;
+}
+.js2-center-wrap.w960 {
+  max-width: 960px;
+}
+.js2-section-title {
+  text-align: center;
+}
+.js2-section-title .title {
+  font-size: 2em;
+  font-weight: bold;
+}
+.js2-section-title .desc {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+.js2-text-ellipsis {
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+

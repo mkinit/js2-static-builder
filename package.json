@@ -19,6 +19,7 @@
         "modules"
     ],
     "author": "im@mkinit.com",
+    "github":"https://github.com/mkinit/js2-static-builder",
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.6.2",

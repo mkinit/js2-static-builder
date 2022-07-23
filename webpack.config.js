@@ -8,7 +8,7 @@ const route = require('./src/route').route //导入页面路由
 let pages_entry = {} //多个页面入口
 
 //项目模式，多入口模式为true，单一入口为false
-const multiple_mode = false
+const multiple_mode = true
 
 const resource_path = 'assets' //自定义资源打包目录
 
@@ -69,14 +69,14 @@ route.forEach(item => {
             title,
             name, //用于定义页面body的类名
             chunks: ['vendors', 'main', name], //会插入同名js到html底部，vendors是第三方工具库；main是入口文件（引用了所有自定义的公共库），
-            template: directory ? `./src/view/${directory}/${name}/${name}.ejs` : `./src/view/${name}/${name}.ejs`,
+            template: directory ? `./src/view/${directory}/${name}/index.ejs` : `./src/view/${name}/index.ejs`,
             filename: directory ? `${directory}/${name}.html` : `${name}.html`, //多页面需要指定打包后的文件名
         })
     )
 
-    //如果是多页面入口，根据路由生成多个入口文件
+    //如果是多个入口模式，根据路由生成多个入口文件
     if (multiple_mode) {
-        pages_entry[name] = directory ? `./src/view/${directory}/${name}/${name}.js` : `./src/view/${name}/${name}.js`
+        pages_entry[name] = directory ? `./src/view/${directory}/${name}/index.js` : `./src/view/${name}/index.js`
     }
 })
 

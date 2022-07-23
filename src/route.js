@@ -1,11 +1,16 @@
+const NODE_ENV = process.env.NODE_ENV //环境变量
+
 //前台页面（没有directory属性）
 const front = [{
 	name: 'index',
 	title: '所有示例链接'
 }]
 
-//二级页面（directory属性为打包后的目录，没有该属性默认打包在根目录）
+//组件演示页面
 const demo = [{
+		name: 'index',
+		title: '组件示例',
+	},{
 		name: 'iconfont',
 		title: '字体图标示例',
 	}, {
@@ -76,11 +81,18 @@ const demo = [{
 	}
 ]
 
-//批量写入属性
+
+//二级页面（directory属性为打包后的目录，没有该属性默认打包在根目录）
 demo.forEach(item => {
 	item.directory = 'demo' //目录名称需要跟实际项目目录名称一致（src/view/demo/）
 })
 
+const route = [...front]
+
+if (NODE_ENV != 'production') {
+	route.push(...demo)
+}
+
 module.exports = {
-	route: [...front, ...demo]
+	route
 }
