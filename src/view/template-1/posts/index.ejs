@@ -1,0 +1,15 @@
+<!-- 引用公共头部 -->
+<%= require('../public/header.ejs')({htmlWebpackPlugin}) %>
+<div class="js2-center-wrap w1280">
+	<div class="js2-flex justify-between">
+		<div class="js2-column-4">
+			<%= require('@/components/sidebar/1/sidebar.ejs')() %>
+		</div>
+		<div class="js2-column-15">
+			<%= require('@/components/post-list/2/post-list.ejs')() %>
+			<%= require('@/components/pagination/1/pagination.ejs')() %>
+		</div>
+	</div>
+</div>
+<!-- 引用公共底部 -->
+<%= require('../public/footer.ejs')() %>

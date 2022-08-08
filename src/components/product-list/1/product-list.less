@@ -1,30 +1,20 @@
-.latest-product-list-1 {
-	.list-title {
-		text-align: center;
-		padding: 3em 0 1.5em;
-		font-size: 1.5em;
-		font-weight: bold;
-		.description{
-			font-size: .75em;
-			font-weight: normal;
-			color:@primary;
-		}
-	}
-
+.c-product-list-1 {
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		margin-top:2em;
 
 		li {
 			width: 22%;
 			margin: 0 1.5% 2em;
-			box-shadow: 0 0 6px lighten(@border,10%);
+			box-shadow: 0 0 6px lighten(@border, 10%);
 			border-radius: .5em;
 			overflow: hidden;
 			transition: all .2s linear;
-			background-color:@invert;
-			&:hover{
+			background-color: @invert;
+
+			&:hover {
 				box-shadow: 0 0 6px @border;
 			}
 
@@ -42,14 +32,14 @@
 
 			.post-title {
 				text-align: center;
-				font-size:1.125em;
 				line-height: 2;
-				padding:0 1em;
+				padding: 0 1em;
 			}
 		}
 	}
-	.bottom{
-		text-align:center;
+
+	.bottom {
+		text-align: center;
 	}
 
 }

@@ -1,0 +1,40 @@
+.c-product-list-2 {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		li {
+			width: 22%;
+			margin: 0 1.5% 2em;
+			box-shadow: 0 0 6px lighten(@border, 10%);
+			border-radius: .5em;
+			overflow: hidden;
+			transition: all .2s linear;
+			background-color: @invert;
+
+			&:hover {
+				box-shadow: 0 0 6px @border;
+			}
+
+			.thumbnail {
+				overflow: hidden;
+			}
+
+			img {
+				transition: all .3s linear;
+
+				&:hover {
+					transform: scale(1.25);
+				}
+			}
+
+			.post-title {
+				text-align: center;
+				line-height: 2;
+				padding: 0 1em;
+			}
+		}
+	}
+
+}

@@ -1,37 +1,64 @@
 .c-banner-1 {
-    position : relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
 
-    .item {
-        width   : 100vw;
-        position: absolute;
-        z-index : 50;
-        left    : 0;
-        top     : 0;
-        opacity : 0;
-        img{
-            width:100%;
-        }
-        &:nth-child(1){
-            animation: c-banner-1 24s linear infinite;
-        }
-        &:nth-child(2){
-            animation: c-banner-1 24s linear 8s infinite;
-        }
-        &:nth-child(3){
-            animation: c-banner-1 24s linear 16s infinite;
-        }
-    }
-}
-
-@keyframes c-banner-1 {
-    10%{
-        opacity: 1;
-    }
-    30%{
-        opacity: 1;
-    }
-    40%{
-        opacity: 0;
+    ul {
+        position: relative;
+        width: 500%;
+        left: 0;
+        animation: banner 30s 3s infinite;
     }
 
+    ul li {
+        width: 20%;
+        float: left;
+    }
+
+    @keyframes banner {
+        10% {
+            /*第一张图*/
+            left: 0%;
+        }
+
+        13% {
+            /*第二张图*/
+            left: -100%;
+        }
+
+        30% {
+            left: -100%;
+        }
+
+        33% {
+            /*第三张图*/
+            left: -200%;
+        }
+
+        50% {
+            left: -200%;
+        }
+
+        53% {
+            /*第四张图*/
+            left: -300%;
+        }
+
+        70% {
+            left: -300%;
+        }
+
+        73% {
+            /*第五张图*/
+            left: -400%;
+        }
+
+        90% {
+            left: -400%;
+        }
+
+        93% {
+            left: 0%;
+        }
+    }
 }

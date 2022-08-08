@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="renderer" content="webkit" />
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+	<link rel="icon" type="image/png" href="${require('@/images/favicon.png')}" />
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
+	<title>
+		<%= htmlWebpackPlugin.options.title %>
+	</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+</head>
+<!-- body class 用于区别每个页面 ，来自路由文件的配置，命名规则：page-文件名 -->
+
+<body class="page-<%= htmlWebpackPlugin.options.name %>">
+	<div class="website">
+		<%= require('@/components/menu/3/menu.ejs')() %>
+		<%= require('@/components/banner/1/banner.ejs')() %>

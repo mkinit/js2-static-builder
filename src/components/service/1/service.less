@@ -1,34 +1,48 @@
-.c-service-1{
-	.items{
+.c-service-1 {
+	.js2-section-title {
+		.title {
+			font-weight: bold;
+			color: @primary;
+		}
+	}
+
+	.items {
 		display: flex;
-		margin-top:1em;
-		.item{
-			flex:1;
-			cursor:pointer;
-			&:hover{
-				background-color:@primary;
-				img{
-					opacity:.15;
+		margin-top: 1em;
+
+		.item {
+			flex: 1;
+			cursor: pointer;
+
+			&:hover {
+				background-color: @primary;
+
+				img {
+					opacity: .15;
 				}
-				.item-text{
-					color:#FFF;
+
+				.item-text {
+					color: #FFF;
 				}
 			}
 		}
-		.item-text{
-			height:20vw;
-			max-height:256px;
+
+		.item-text {
+			height: 20vw;
+			max-height: 256px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			align-items:center;
+			align-items: center;
 			font-weight: bold;
-			color:@font-second;
-			.title{
-				font-size:1.75em;
+			color: @font-second;
+
+			.title {
+				font-size: 1.75em;
 			}
-			.desc{
-				font-size:1.5em;
+
+			.desc {
+				font-size: 1.5em;
 				text-transform: uppercase;
 				line-height: 2;
 			}

@@ -1,6 +1,13 @@
 .c-culture-1 {
+	.js2-section-title {
+		.title {
+			font-weight: bold;
+			color: @primary;
+		}
+	}
+
 	.wrap {
-		margin-top: 1em;
+		margin-top: 1.5em;
 		background: @font-second url('./culture-1.jpg') center/cover no-repeat;
 		background-blend-mode: multiply;
 		display: flex;
@@ -19,6 +26,10 @@
 			color: #FFF;
 			transition: all .2s linear;
 			position: relative;
+
+			.title{
+				font-size:1.75em;
+			}
 
 			&:nth-child(1),
 			&:nth-child(3) {
@@ -60,17 +71,6 @@
 				border: 4px solid transparent;
 				transition: all .2s linear;
 			}
-
-			.title {
-				font-size: 1.75em;
-				font-weight: bold;
-			}
-
-			.desc {
-				font-size: 1.125em;
-				line-height: 2;
-			}
-
 		}
 	}
 }

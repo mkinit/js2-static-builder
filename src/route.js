@@ -1,16 +1,29 @@
 const NODE_ENV = process.env.NODE_ENV //环境变量
 
 //前台页面（没有directory属性）
-const front = [{
-	name: 'index',
-	title: '所有示例链接'
-}]
+const front = []
+
+const templates = [
+	[{
+		name: 'index',
+		title: '首页'
+	}, {
+		name: 'products',
+		title: '产品中心'
+	}, {
+		name: 'posts',
+		title: '新闻中心'
+	}, {
+		name: 'detail',
+		title: '详情页'
+	}]
+]
 
 //组件演示页面
 const demo = [{
 		name: 'index',
 		title: '组件示例',
-	},{
+	}, {
 		name: 'iconfont',
 		title: '字体图标示例',
 	}, {
@@ -88,6 +101,14 @@ demo.forEach(item => {
 })
 
 const route = [...front]
+
+//模板目录
+templates.forEach((items, index) => {
+	items.forEach(item => {
+		item.directory = 'template-' + (index + 1)
+	})
+	route.push(...items)
+})
 
 if (NODE_ENV != 'production') {
 	route.push(...demo)

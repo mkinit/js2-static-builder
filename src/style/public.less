@@ -3,11 +3,12 @@
 .iconfont,
 .dashicons {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: initial;
 }
 
-[class^='c-']{
-	padding:1em 0;
+.dashicons {
+	width: unset;
+	height: unset;
 }
 
 //居中容器
@@ -23,16 +24,21 @@
 	}
 }
 
+.js2-section{
+	padding:1em 0;
+}
+
 //区域标题
 .js2-section-title {
 	text-align: center;
+
 	.title {
-		font-size:2em;
+		font-size: 1.5em;
 		font-weight: bold;
 	}
 
 	.desc {
-		font-size:1.5em;
+		font-size: 1.125em;
 		line-height: 1.5;
 	}
 }

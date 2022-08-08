@@ -8,7 +8,7 @@ const route = require('./src/route').route //导入页面路由
 let pages_entry = {} //多个页面入口
 
 //项目模式，多入口模式为true，单一入口为false
-const multiple_mode = true
+const multiple_mode = false
 
 const resource_path = 'assets' //自定义资源打包目录
 
