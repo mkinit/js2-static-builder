@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	word-break: break-all;
 }
 
 html,
@@ -24,7 +25,7 @@ h4,
 h5,
 h6,
 p {
-	margin: 0 0 .5em ;
+	margin: .5em 0;
 }
 
 h1 {
@@ -58,7 +59,7 @@ img {
 }
 
 a {
-	color: @primary;
+	color: @font;
 	text-decoration: none;
 
 	&:hover {
@@ -119,8 +120,9 @@ button {
 }
 
 ::placeholder {
-	color: rgba(@font-second, .6);
+	color: @font-second;
 	font-family: @font-family;
+	font-size: .85rem;
 }
 
 select {
@@ -145,4 +147,10 @@ table {
 th,
 td {
 	border: 1px solid @font;
+}
+
+/* 代码块 */
+code[class*="language-"],
+pre[class*="language-"] {
+	white-space: break-spaces;
 }
