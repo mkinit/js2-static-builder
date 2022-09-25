@@ -3,13 +3,12 @@
 <div class="js2-center-wrap wrap-1280">
 	<div class="js2-flex justify-between">
 		<div class="js2-column-5 js2-margin-top-l">
-			<%= require('@/components/sidebar/1/sidebar.ejs')() %>
+			<%= require('@/components/sidebar/1/sidebar.ejs')({htmlWebpackPlugin}) %>
 		</div>
 		<div class="js2-column-18 js2-margin-top-l">
-			<%= require('@/components/post-list/2/post-list.ejs')() %>
-			<%= require('@/components/pagination/1/pagination.ejs')() %>
+			<%= require('@/components/post/1/post.ejs')({htmlWebpackPlugin}) %>
 		</div>
 	</div>
 </div>
 <!-- 引用公共底部 -->
-<%= require('../public/footer.ejs')() %>
+<%= require('../public/footer.ejs')({htmlWebpackPlugin}) %>

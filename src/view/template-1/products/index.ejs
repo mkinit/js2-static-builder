@@ -1,11 +1,11 @@
 <!-- 引用公共头部 -->
 <%= require('../public/header.ejs')({htmlWebpackPlugin}) %>
-<div class="js2-center-wrap w1280 js2-flex justify-between">
+<div class="js2-center-wrap wrap-1280 js2-flex justify-between">
 	<div class="js2-flex justify-between">
-		<div class="js2-column-4">
+		<div class="js2-column-5 js2-margin-top-l">
 			<%= require('@/components/sidebar/1/sidebar.ejs')() %>
 		</div>
-		<div class="js2-column-15">
+		<div class="js2-column-18 js2-margin-top-l">
 			<%= require('@/components/product-list/2/product-list.ejs')() %>
 			<%= require('@/components/pagination/1/pagination.ejs')() %>
 		</div>
