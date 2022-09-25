@@ -3,6 +3,7 @@ const NODE_ENV = process.env.NODE_ENV //环境变量
 //前台页面（没有directory属性）
 const front = []
 
+//模版页面
 const templates = [
 	[{
 		name: 'index',
