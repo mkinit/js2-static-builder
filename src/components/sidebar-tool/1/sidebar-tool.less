@@ -1,32 +1,35 @@
 .c-sidebar-tool-1{
 	position:fixed;
 	z-index:100;
-	right:0;
+	right:-2px;
 	bottom:10%;
 	width:44px;
 	.item{
 		background-color: @font;
+		box-shadow: 0 0 5px @border;
 		margin:1px 0;
 		cursor: pointer;
 		color:@invert;
-		padding:0 6px;
 		white-space: nowrap;
 		transition: all .5s linear;
 		position:relative;
 		left:0;
 		transform: translateX(0);
 		width:max-content;
+		padding:5px 6px;
+		.icon{
+			vertical-align: middle;
+		}
 		a{
 			color:@invert;
+			display: flex;
+			align-items: center;
 		}
 		&:hover{
 			background-color: @primary;
 		}
 		.text{
 			margin-left:8px;
-		}
-		.icon{
-			margin:6px 0;
 		}
 	}
 	.stretch{
