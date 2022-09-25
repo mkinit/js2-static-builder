@@ -71,7 +71,7 @@ route.forEach(item => {
             chunks: ['vendors', 'main', name], //会插入同名js到html底部，vendors是第三方工具库；main是入口文件（引用了所有自定义的公共库）
             directory,
             template: directory ? `./src/view/${directory}/${name}/index.ejs` : `./src/view/${name}/index.ejs`,
-            filename: directory ? `${directory}/${name}.html` : `${name}.html`, //多页面需要指定打包后的文件名
+            filename: directory ? `${directory}/${name}/index.html` : `${name}.html`, //多页面需要指定打包后的文件名
         })
     )
 
