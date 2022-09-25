@@ -1,10 +1,10 @@
 <!-- 引用公共头部 -->
 <%= require('../public/header.ejs')({htmlWebpackPlugin}) %>
-	<%= require('@/components/product-list/1/product-list.ejs')() %>
-	<%= require('@/components/about/1/about.ejs')() %>
-	<%= require('@/components/post-list/1/post-list.ejs')() %>
-	<%= require('@/components/culture/1/culture.ejs')() %>
-	<%= require('@/components/service/1/service.ejs')() %>
-	<%= require('@/components/client/1/client.ejs')() %>
+	<%= require('@/components/product-list/1/product-list.ejs')({htmlWebpackPlugin}) %>
+	<%= require('@/components/about/1/about.ejs')({htmlWebpackPlugin}) %>
+	<%= require('@/components/post-list/1/post-list.ejs')({htmlWebpackPlugin}) %>
+	<%= require('@/components/culture/1/culture.ejs')({htmlWebpackPlugin}) %>
+	<%= require('@/components/service/1/service.ejs')({htmlWebpackPlugin}) %>
+	<%= require('@/components/client/1/client.ejs')({htmlWebpackPlugin}) %>
 <!-- 引用公共底部 -->
 <%= require('../public/footer.ejs')() %>
