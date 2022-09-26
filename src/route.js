@@ -3,9 +3,12 @@ const NODE_ENV = process.env.NODE_ENV //环境变量
 //前台页面（没有directory属性）
 const front = []
 
-//模版页面
+//模版页面（示例为js2system模板页面）
 const templates = [
 	[{
+		name: 'layout',
+		title: '模板'
+	}, {
 		name: 'index',
 		title: '首页'
 	}, {
@@ -15,8 +18,17 @@ const templates = [
 		name: 'posts',
 		title: '新闻中心'
 	}, {
-		name: 'detail',
+		name: 'post',
 		title: '详情页'
+	}, {
+		name: 'guestbook',
+		title: '留言页'
+	}, {
+		name: 'search',
+		title: '搜索页'
+	}, {
+		name: 'tag',
+		title: '标签页'
 	}]
 ]
 
