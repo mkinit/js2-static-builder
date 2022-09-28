@@ -10,7 +10,7 @@ let pages_entry = {} //多个页面入口
 //项目模式，多入口模式为true，单一入口为false
 const multiple_mode = false
 
-const resource_path = 'assets' //自定义资源打包目录
+const resource_path = 'static' //自定义资源打包目录
 
 const is_production = NODE_ENV === 'production' //判断是否生产环境
 
