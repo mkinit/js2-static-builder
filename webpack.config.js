@@ -17,7 +17,9 @@ const is_production = NODE_ENV === 'production' //判断是否生产环境
 let plugins = [
     new CleanWebpackPlugin(), //打包清理插件
     new MiniCssExtractPlugin({ //分离出入口样式文件
-        filename: resource_path ? `${resource_path}/css/[name].[contenthash].css` : 'css/[name].[contenthash].css'
+        publicPath:'',
+        //filename: resource_path ? `${resource_path}/css/[name].[contenthash].css` : 'css/[name].[contenthash].css'
+        filename: resource_path+'/main.css?{System:version}'//自定义为js2system模板使用
     }),
     new SpritesmithPlugin({ //生成雪碧图和样式
         src: {
@@ -114,7 +116,8 @@ module.exports = {
     output: {
         path: __dirname + '/dist/', //跟入口文件同一层级目录，如果没有指定该属性配置，webpack会自动创建一个dist目录
         publicPath: '/',
-        filename: resource_path ? `${resource_path}/js/[name].[contenthash].js` : 'js/[name].[contenthash].js',
+       // filename: resource_path ? `${resource_path}/js/[name].[contenthash].js` : 'js/[name].[contenthash].js',
+        filename: resource_path+'/main.js?{System:version}',//自定义为js2system模板使用
     },
     module: {
         rules: [{
@@ -136,7 +139,8 @@ module.exports = {
                     options: {
                         name: '[name].[ext]',
                         outputPath: resource_path ? `${resource_path}/images` : 'images', //资源的打包目录，相对于dist目录
-                        publicPath: resource_path ? `/${resource_path}/images` : '/images', //所有引用的图片路径最终会被替换为这个
+                        //publicPath: resource_path ? `/${resource_path}/images` : '/images', //所有引用的图片路径最终会被替换为这个
+                        publicPath: '__img__/images', //自定义为js2system模板使用
                     }
                 }]
             },
@@ -147,7 +151,8 @@ module.exports = {
                     options: {
                         name: '[name].[ext]',
                         outputPath: resource_path ? `${resource_path}/iconfont` : 'iconfont', //资源的打包目录，相对于dist目录
-                        publicPath: resource_path ? `/${resource_path}/iconfont` : '/iconfont', //所有引用的资源路径最终会被替换为这个
+                        //publicPath: resource_path ? `/${resource_path}/iconfont` : '/iconfont', //所有引用的资源路径最终会被替换为这个
+                        publicPath: './iconfont', //自定义为js2system模板使用
                     }
                 }]
             },
