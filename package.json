@@ -19,7 +19,7 @@
         "modules"
     ],
     "author": "im@mkinit.com",
-    "github":"https://github.com/mkinit/js2-static-builder",
+    "github": "https://github.com/mkinit/js2-static-builder",
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.6.2",
@@ -41,5 +41,6 @@
         "webpack-cli": "^3.2.3",
         "webpack-dev-server": "^3.7.2",
         "webpack-spritesmith": "^1.0.2"
-    }
+    },
+    "dependencies": {}
 }
