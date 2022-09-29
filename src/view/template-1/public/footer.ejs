@@ -1,6 +1,17 @@
 	<%= require('@/components/bottom/2/bottom.ejs')({htmlWebpackPlugin}) %>
 </div>
 	<%= require('@/components/sidebar-tool/1/sidebar-tool.ejs')({htmlWebpackPlugin}) %>
+	{if !empty($setting['ba'])}
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?{$setting['ba']}";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	{/if}
 </body>
 
 </html>

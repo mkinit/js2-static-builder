@@ -42,5 +42,8 @@
         "webpack-dev-server": "^3.7.2",
         "webpack-spritesmith": "^1.0.2"
     },
-    "dependencies": {}
+    "dependencies": {
+        "qrcode": "^1.5.1",
+        "swiper": "^8.3.0"
+    }
 }
