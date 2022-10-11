@@ -1,7 +1,14 @@
 <!-- 引用公共头部 -->
 <%= require('../public/header.ejs')({htmlWebpackPlugin}) %>
-	<%= require('@/components/product-list/1/product-list.ejs')({htmlWebpackPlugin}) %>
-	<%= require('@/components/about/1/about.ejs')({htmlWebpackPlugin}) %>
+	<div>
+		<div class="js2-text-align-center js2-font-size-xl js2-font-bold js2-highlight-primary js2-margin-top-m">产品中心</div>
+		<div class="js2-text-align-center">Product Center</div>
+		<%= require('@/components/product-list/1/product-list.ejs')({htmlWebpackPlugin}) %>
+		<div class="js2-text-align-center js2-highlight-primary"><a href="/${htmlWebpackPlugin.options.directory}/products/index.html">更多产品>></a></div>
+	</div>
+	<div class="js2-margin-top-xl js2-bg js2-padding-top-l js2-padding-bottom-l">
+		<%= require('@/components/about/1/about.ejs')({htmlWebpackPlugin}) %>
+	</div>
 	<%= require('@/components/post-list/1/post-list.ejs')({htmlWebpackPlugin}) %>
 	<%= require('@/components/culture/1/culture.ejs')({htmlWebpackPlugin}) %>
 	<%= require('@/components/service/1/service.ejs')({htmlWebpackPlugin}) %>
