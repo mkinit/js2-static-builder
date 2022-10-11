@@ -19,8 +19,8 @@ window.onload = () => {
 
 	//二维码生成器
 	QRCode.toDataURL(location.origin, {}, function(err, url) {
-		if (err) throw err
 		var img = document.querySelector('.qrcode-img')
+		if (err || !img) return
 		img.src = url
 	})
 }
