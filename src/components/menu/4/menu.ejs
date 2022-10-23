@@ -1,0 +1,40 @@
+<nav class="c-menu-4">
+	<span class="close-btn dashicons dashicons-no-alt"></span>
+	<span class="menu-btn dashicons dashicons-menu-alt"></span>
+	<ul class="menu-list">
+		<li>
+			<a href="/">首页</a>
+		</li>
+		<li>
+			<a href="#">
+				父类
+				<span class="dashicons dashicons-arrow-down-alt2"></span>
+			</a>
+			<ul class="sub-menu">
+				<li><a href="#">子类</a></li>
+				<li><a href="#">子类</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">
+				父类
+				<span class="dashicons dashicons-arrow-down-alt2"></span>
+			</a>
+			<ul class="sub-menu">
+				<li><a href="#">子类</a></li>
+				<li><a href="#">子类</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+<script>
+const menu = document.querySelector('.c-menu-4')
+const menu_btn = menu.querySelector('.menu-btn')
+const menu_close_btn = menu.querySelector('.close-btn')
+menu_btn.onclick = () => {
+	menu.classList.add('show')
+}
+menu_close_btn.onclick = () => {
+	menu.classList.remove('show')
+}
+</script>
