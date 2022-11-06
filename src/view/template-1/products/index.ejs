@@ -4,9 +4,12 @@
 	<div class="js2-column-5 js2-margin-top-l">
 		<%= require('@/components/sidebar/1/sidebar.ejs')({htmlWebpackPlugin}) %>
 	</div>
-	<div class="js2-column-18 js2-margin-top-l">
-		<%= require('@/components/product-list/2/product-list.ejs')({htmlWebpackPlugin}) %>
-		<%= require('@/components/pagination/1/pagination.ejs')({htmlWebpackPlugin}) %>
+	<div class="js2-column-18">
+		<%= require('@/components/crumbs/1/crumbs.ejs')({htmlWebpackPlugin}) %>
+		<div class="js2-margin-top-l">
+			<%= require('@/components/product-list/2/product-list.ejs')({htmlWebpackPlugin}) %>
+			<%= require('@/components/pagination/1/pagination.ejs')({htmlWebpackPlugin}) %>
+		</div>
 	</div>
 </div>
 <!-- 引用公共底部 -->

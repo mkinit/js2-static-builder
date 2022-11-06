@@ -23,12 +23,22 @@ const templates = [
 	}, {
 		name: 'guestbook',
 		title: '留言页'
+	}],
+	[{
+		name: 'layout',
+		title: '模板'
 	}, {
-		name: 'search',
-		title: '搜索页'
+		name: 'index',
+		title: '首页'
 	}, {
-		name: 'tag',
-		title: '标签页'
+		name: 'posts',
+		title: '文章列表'
+	}, {
+		name: 'post',
+		title: '详情页'
+	}, {
+		name: 'guestbook',
+		title: '留言页'
 	}]
 ]
 
@@ -74,6 +84,9 @@ const demo = [{
 	}, {
 		name: 'post',
 		title: '内容页示例',
+	},{
+		name: 'tag',
+		title: '标签示例',
 	}, {
 		name: 'sidebar',
 		title: '边栏示例',

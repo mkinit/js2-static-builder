@@ -1,9 +1,10 @@
 //在样式入口文件引用的样式都会被打包到一起，单独打包页面的样式需要在页面的入口文件（页面的js）引用
 
-@import url('./var.less'); //页面使用变量前需要引用，除非是以下文件
+//引用模板样式
+@import url('../view/template-1/main.less');
+
+@import url('../view/template-2/main.less');
+
 @import url('./reset.less'); //初始化样式
 @import url('./no-css.less'); //公共样式
 @import url('./demo.less'); //演示组件样式，正式打包按需引用
-
-//引用模板样式
-@import url('../view/template-1/main.less');

@@ -2,10 +2,10 @@
 	<span class="close-btn dashicons dashicons-no-alt"></span>
 	<span class="menu-btn dashicons dashicons-menu-alt"></span>
 	<ul class="menu-list">
-		<li>
+		<li class="parent">
 			<a href="/">首页</a>
 		</li>
-		<li>
+		<li class="parent">
 			<a href="#">
 				父类
 				<span class="dashicons dashicons-arrow-down-alt2"></span>
@@ -15,7 +15,7 @@
 				<li><a href="#">子类</a></li>
 			</ul>
 		</li>
-		<li>
+		<li class="parent current">
 			<a href="#">
 				父类
 				<span class="dashicons dashicons-arrow-down-alt2"></span>
@@ -37,4 +37,13 @@ menu_btn.onclick = () => {
 menu_close_btn.onclick = () => {
 	menu.classList.remove('show')
 }
+const li_parent_list = menu.querySelectorAll('li.parent')
+li_parent_list.forEach(parent => {
+	parent.addEventListener('click', () => {
+		li_parent_list.forEach(parent => {
+			parent.classList.remove('current')
+		})
+		parent.classList.add('current')
+	})
+})
 </script>
