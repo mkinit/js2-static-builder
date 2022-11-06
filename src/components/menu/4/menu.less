@@ -2,16 +2,20 @@
 	position: fixed;
 	left: 0px;
 	top: 0;
-	height: 100vh;
-	min-width: 200px;
+	width: 200px;
 	text-align: center;
 	border-right: 1px solid @border;
-	padding: 4em 0;
 	transition: all .3s linear;
 	background-color: #FFF;
 	z-index: 1000;
 	line-height: 2.5;
 	background-color: @bg;
+	min-height: 100vh;
+
+	.logo{
+		padding:0 2em;
+		border-bottom:1px solid @border;
+	}
 
 	&.show {
 		left: 0;
@@ -74,7 +78,8 @@
 		&>li {
 
 			&>a {
-				font-size: 1.025em;
+				font-size: 1.125em;
+				line-height: 2.5;
 				font-weight: bold;
 			}
 
