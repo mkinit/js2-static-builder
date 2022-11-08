@@ -5,13 +5,12 @@
 		<h1><a href="/"><img src="${require('@/images/logo.png')}" alt=""></a></h1>
 	</div>
 	<ul class="menu-list">
-		<li class="parent">
+		<li>
 			<a href="/">首页</a>
 		</li>
-		<li class="parent">
+		<li>
 			<a href="#">
 				父类
-				<span class="dashicons dashicons-arrow-down-alt2"></span>
 			</a>
 			<ul class="sub-menu">
 				<li><a href="#">子类</a></li>
@@ -22,10 +21,9 @@
 				<li><a href="#">子类</a></li>
 			</ul>
 		</li>
-		<li class="parent current">
+		<li>
 			<a href="#">
 				父类
-				<span class="dashicons dashicons-arrow-down-alt2"></span>
 			</a>
 			<ul class="sub-menu">
 				<li><a href="#">子类</a></li>
@@ -48,13 +46,4 @@ menu_btn.onclick = () => {
 menu_close_btn.onclick = () => {
 	menu.classList.remove('show')
 }
-const li_parent_list = menu.querySelectorAll('li.parent')
-li_parent_list.forEach(parent => {
-	parent.addEventListener('click', () => {
-		li_parent_list.forEach(parent => {
-			parent.classList.remove('current')
-		})
-		parent.classList.add('current')
-	})
-})
 </script>
