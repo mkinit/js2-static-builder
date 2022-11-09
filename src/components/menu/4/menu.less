@@ -62,7 +62,8 @@
 			display: block;
 			position: relative;
 
-			&:hover {
+
+			&.current,&:hover {
 				color: @secondary;
 			}
 		}
@@ -70,7 +71,6 @@
 		&>li {
 
 			&>a {
-				color: @primary;
 				font-size: 16px;
 				line-height: 2.5;
 				font-weight: bold;
@@ -86,13 +86,7 @@
 			line-height: 2;
 			padding: .5em 0;
 
-			a {
-				color: @font-second;
-
-				&:hover {
-					color: @secondary;
-				}
-			}
+		
 		}
 
 	}
