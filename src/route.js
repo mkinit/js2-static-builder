@@ -3,43 +3,59 @@ const NODE_ENV = process.env.NODE_ENV //环境变量
 //前台页面（没有directory属性）
 const front = []
 
+const template_1 = [{
+	name: 'layout',
+	title: '模板'
+}, {
+	name: 'index',
+	title: '首页'
+}, {
+	name: 'products',
+	title: '产品中心'
+}, {
+	name: 'posts',
+	title: '新闻中心'
+}, {
+	name: 'post',
+	title: '详情页'
+}, {
+	name: 'guestbook',
+	title: '留言页'
+}, {
+	name: 'search',
+	title: '搜索页'
+}, {
+	name: 'tag',
+	title: '标签页'
+}]
+
+const template_2 = [{
+	name: 'layout',
+	title: '模板'
+}, {
+	name: 'index',
+	title: '首页'
+}, {
+	name: 'posts',
+	title: '文章列表'
+}, {
+	name: 'post',
+	title: '详情页'
+}, {
+	name: 'guestbook',
+	title: '留言页'
+}, {
+	name: 'search',
+	title: '搜索页'
+}, {
+	name: 'tag',
+	title: '标签页'
+}]
+
 //模版页面（示例为js2system模板页面）
 const templates = [
-	[{
-		name: 'layout',
-		title: '模板'
-	}, {
-		name: 'index',
-		title: '首页'
-	}, {
-		name: 'products',
-		title: '产品中心'
-	}, {
-		name: 'posts',
-		title: '新闻中心'
-	}, {
-		name: 'post',
-		title: '详情页'
-	}, {
-		name: 'guestbook',
-		title: '留言页'
-	}],
-	[{
-		name: 'layout',
-		title: '模板'
-	}, {
-		name: 'index',
-		title: '首页'
-	}, {
-		name: 'posts',
-		title: '文章列表'
-	}, {
-		name: 'post',
-		title: '详情页'
-	}, {
-		name: 'guestbook',
-		title: '留言页'
-	}]
+	template_1,
+	template_2
 ]
 
 //组件演示页面
@@ -84,7 +100,7 @@ const demo = [{
 	}, {
 		name: 'post',
 		title: '内容页示例',
-	},{
+	}, {
 		name: 'tag',
 		title: '标签示例',
 	}, {
