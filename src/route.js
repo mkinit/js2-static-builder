@@ -29,33 +29,9 @@ const template_1 = [{
 	title: '标签页'
 }]
 
-const template_2 = [{
-	name: 'layout',
-	title: '模板'
-}, {
-	name: 'index',
-	title: '首页'
-}, {
-	name: 'posts',
-	title: '文章列表'
-}, {
-	name: 'post',
-	title: '详情页'
-}, {
-	name: 'guestbook',
-	title: '留言页'
-}, {
-	name: 'search',
-	title: '搜索页'
-}, {
-	name: 'tag',
-	title: '标签页'
-}]
-
 //模版页面（示例为js2system模板页面）
 const templates = [
 	template_1,
-	template_2
 ]
 
 //组件演示页面
