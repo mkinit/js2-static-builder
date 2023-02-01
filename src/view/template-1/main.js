@@ -1,5 +1,5 @@
-import QRCode from 'qrcode'
-import Swiper from 'swiper/swiper-bundle.min'
+import QRCode from './script/qrcode'
+import Swiper from './script/swiper-bundle.min.js'
 window.onload = () => {
 	//轮播图
 	const swiper = new Swiper('.banner-2-swiper', {
