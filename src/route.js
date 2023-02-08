@@ -77,6 +77,9 @@ const demo = [{
 		name: 'post',
 		title: '内容页示例',
 	}, {
+		name: 'comment',
+		title: '评论列表示例',
+	}, {
 		name: 'tag',
 		title: '标签示例',
 	}, {
