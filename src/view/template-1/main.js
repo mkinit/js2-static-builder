@@ -5,7 +5,7 @@ window.onload = () => {
 	const swiper = new Swiper('.banner-2-swiper', {
 		speed: 1000,
 		loop: true,
-		effect: 'fade',
+		effect: 'slide',
 		autoplay: {
 			delay: 3000,
 			disableOnInteraction: false,

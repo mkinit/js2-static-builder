@@ -15,7 +15,9 @@
 
 <body class="page-<%= htmlWebpackPlugin.options.name %>">
 	<div class="website">
-		<%= require('@/components/menu/3/menu.ejs')({htmlWebpackPlugin}) %>
 		<div class="js2-center-wrap wrap-1920">
+			<%= require('@/components/menu/3/menu.ejs')({htmlWebpackPlugin}) %>
+		</div>
+		<div class="js2-center-wrap wrap-1920 js2-overflow-hidden">
 			<%= require('@/components/banner/2/banner.ejs')({htmlWebpackPlugin}) %>
 		</div>
