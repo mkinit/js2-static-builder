@@ -24,6 +24,66 @@
 - 模板首页：http://localhost:9028/template-1/index/index.html
 	- 模板名称在src/route.js中定义
 
+## 注意：
+ - 多级目录：需要在路由（src/route.js）声明要生成的目录名称属性：directory（属性值需要跟项目实际目录名称一致）
+ - 打包后所有资源都是绝对路径，无法直接打开预览（不支持file://），需要服务器（本地预览推荐使用：live-server）。
+ - webpack.config.js（包括导入模块）修改后需要重新启动项目
+ - 首次放入图标生成精灵图时，需要重新启动项目
+
+## 功能说明
+- 添加项目根目录（src）别名，JS引用使用“@”，CSS引用使用“~@”（2020-10-2）
+- CSS/JS使用contenthash标示（2020-9-30）
+- 自定义打包路径（用于生产环境匹配后端资源路径）
+- 分离第三方工具库，全部打包到vendors.js中（node_modules，npm下载引用的库）
+- 字体打包（用于字体图标库）
+- 自动生成精灵图
+- 自动添加CSS前缀
+- ES6语法转换
+- 使用less预处理
+- 使用ejs模板引擎
+- 图片资源打包
+
+## 项目结构
+- webpack.config.js：工程配置文件
+	- multiple_mode：可以修改工程模式
+	- production_path：可自定义生产环境的资源打包路径
+- package.json：项目依赖、命令配置
+- postcss.config.js：CSS自动前缀插件配置
+- .babelrc：低版本JS语法转换配置
+- src：项目源文件
+	- entry.js：项目的入口文件，引用项目的样式入口文件和自定义公共模块
+	- router.js：页面路由文件
+	- iconfont：字体图标（iconfont.cn）
+		- iconfont.css：字体图标样式文件
+	- images：图片目录
+		- sprite：精灵图标原始图片（放入图标后会自动生成）
+	- sprite：自动生成的精灵图目录
+		- sprite.css：自动生成的精灵图样式文件
+	- public：页面头部和底部的基本HTML结构
+	- script：自定义公共模块
+	- style：公共样式（可以在entry.js中删除引用，使用你自己的样式）
+		- style.less：项目样式入口文件
+			- 所有页面公用的样式，单入口模式的页面在此引用所有样式文件
+		- reset.less：初始化样式文件
+		- public.less：公共样式文件
+		- nocss.less：单元化样式文件
+	- view：页面文件
+		- 三个文件构成一个完整页面，以下为示例
+		- index
+			- index.js：页面入口文件（多入口模式的页面在此引用页面样式文件，会分别打包；单入口模式不需要此文件）
+			- index.less：页面样式文件
+			- index.ejs：页面结构
+		- admin：后台的页面（如果要打包成独立目录，需要在路由文件中定义directory属性）
+			- login
+				- login.js
+				- login.less
+				- login.ejs
+	- components：所有组件目录
+		- header：单个组件目录
+			- header.ejs：组件结构
+			- header.less：组件样式
+	
+
 ## 引用
 - 组件的引用
 	```
@@ -62,63 +122,3 @@
 ```
 
 但是最好还是不要这样咯，可以写在页面的js或公共的js中。
-
-## 注意：
- - 项目中安装了jquery、moment是为了演示，请删除（包括iconfont、images、script、sprite目录中的演示文件）后开始你的表演。
- - 多级目录：需要在路由（src/route.js）声明要生成的目录名称属性：directory（属性值需要跟项目实际目录名称一致）
- - 打包后所有资源都是绝对路径，无法直接打开预览（不支持file://），需要服务器（本里预览推荐使用：live-server）。
- - webpack.config.js(包括导入模块)修改后需要重新启动项目
- - 首次放入图标生成精灵图时，需要重新启动项目
-
-## 功能说明
-- 添加项目根目录（src）别名，JS引用使用“@”，CSS引用使用“~@”（2020-10-2）
-- CSS/JS使用contenthash标示（2020-9-30）
-- 自定义打包路径（用于生产环境匹配后端资源路径）
-- 分离第三方工具库，全部打包到vendors.js中（node_modules，npm下载引用的库）
-- 字体打包（用于字体图标库）
-- 自动生成精灵图
-- 自动添加CSS前缀
-- ES6语法转换
-- 使用less预处理
-- 使用ejs模板引擎
-- 图片资源打包
-
-## 项目结构
-- webpack.config.js：工程配置文件
-	- multiple_mode：可以修改工程模式
-	- production_path：可自定义生产环境的资源打包路径
-- package.json：项目依赖、命令配置
-- postcss.config.js：CSS自动前缀插件配置
-- .babelrc：低版本JS语法转换配置
-- src：项目源文件
-	- iconfont：字体图标（iconfont.cn）
-		- iconfont.css：字体图标样式文件
-	- images：图片目录
-		- sprite：精灵图标原始图片（放入图标后会自动生成）
-	- sprite：自动生成的精灵图目录
-		- sprite.css：自动生成的精灵图样式文件
-	- public：页面头部和底部的基本HTML结构
-	- script：自定义公共模块
-	- style：公共样式
-		- style.less：项目样式入口文件
-			- 所有页面公用的样式，单入口模式的页面在此引用所有样式文件
-		- reset.less：初始化样式文件
-		- public.less：公共样式文件
-		- color.less：颜色定义文件
-	- view：页面文件
-	三个文件构成一个完整页面，以下为示例，暂时只有二级目录
-		- index
-			- index.js：页面入口文件（多入口模式的页面在此引用页面样式文件，会分别打包；单入口模式不需要此文件）
-			- index.less：页面样式文件
-			- index.ejs：页面结构
-		- admin：后台的页面（带目录的页面）
-			- login
-				- login.js
-				- login.less
-				- login.ejs
-	- components：所有组件目录
-		- header：单个组件目录
-			- header.ejs：组件结构
-			- header.less：组件样式
-	- entry.js：项目的入口文件，引用项目的样式入口文件和自定义公共模块
-	- router.js：页面路由文件
