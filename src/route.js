@@ -4,9 +4,6 @@ const NODE_ENV = process.env.NODE_ENV //环境变量
 const front = []
 
 const template_1 = [{
-	name: 'layout',
-	title: '模板'
-}, {
 	name: 'index',
 	title: '首页'
 }, {
@@ -29,7 +26,7 @@ const template_1 = [{
 	title: '标签页'
 }]
 
-//模版页面（示例为js2system模板页面）
+//模版页面
 const templates = [
 	template_1,
 ]

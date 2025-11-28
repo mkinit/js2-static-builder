@@ -139,8 +139,7 @@ module.exports = {
                     options: {
                         name: '[name].[ext]',
                         outputPath: resource_path ? `${resource_path}/images` : 'images', //资源的打包目录，相对于dist目录
-                        //publicPath: resource_path ? `/${resource_path}/images` : '/images', //所有引用的图片路径最终会被替换为这个
-                        publicPath: is_production ? '__img__/images' : resource_path ? `/${resource_path}/images` : '/images', //自定义为js2system模板使用
+                        publicPath: resource_path ? `/${resource_path}/images` : '/images', //所有引用的图片路径最终会被替换为这个
                     }
                 }]
             },
@@ -151,8 +150,7 @@ module.exports = {
                     options: {
                         name: '[name].[ext]',
                         outputPath: resource_path ? `${resource_path}/iconfont` : 'iconfont', //资源的打包目录，相对于dist目录
-                        //publicPath: resource_path ? `/${resource_path}/iconfont` : '/iconfont', //所有引用的资源路径最终会被替换为这个
-                        publicPath: is_production?'./iconfont':resource_path ? `/${resource_path}/iconfont` : '/iconfont', //自定义为js2system模板使用
+                        publicPath: resource_path ? `/${resource_path}/iconfont` : '/iconfont', //所有引用的资源路径最终会被替换为这个
                     }
                 }]
             },
