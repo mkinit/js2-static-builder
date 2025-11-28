@@ -18,8 +18,7 @@ let plugins = [
     new CleanWebpackPlugin(), //打包清理插件
     new MiniCssExtractPlugin({ //分离出入口样式文件
         publicPath: '',
-        //filename: resource_path ? `${resource_path}/css/[name].[contenthash].css` : 'css/[name].[contenthash].css'
-        filename: resource_path + '/main.css?{System:version}' //自定义为js2system模板使用
+        filename: resource_path ? `${resource_path}/css/[name].[contenthash].css` : 'css/[name].[contenthash].css'
     }),
     new SpritesmithPlugin({ //生成雪碧图和样式
         src: {
@@ -116,8 +115,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist/', //跟入口文件同一层级目录，如果没有指定该属性配置，webpack会自动创建一个dist目录
         publicPath: '/',
-        // filename: resource_path ? `${resource_path}/js/[name].[contenthash].js` : 'js/[name].[contenthash].js',
-        filename: resource_path + '/main.js?{System:version}', //自定义为js2system模板使用
+        filename: resource_path ? `${resource_path}/js/[name].[contenthash].js` : 'js/[name].[contenthash].js',
     },
     module: {
         rules: [{
