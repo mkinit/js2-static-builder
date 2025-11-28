@@ -7,7 +7,7 @@
 ## node.js版本
 - 12.16.2
 
-## 模式
+## 模式（默认单入口模式）
  - 单入口模式：所有js、css都会打包到一起，npm引用的包除外（entry.js为入口文件）
  - 多入口模式：各个页面的js、css分别打包引用（页面的js即入口文件）
  	- 多入口模式需要确保页面中有index.js作为入口文件
@@ -17,6 +17,12 @@
 - 安装项目依赖：`npm install`
 - 项目启动：`npm run static`
 - 项目打包：`npm run build`
+
+## 预览地址
+- 所有组件demo首页：http://localhost:9028/demo/index/index.html
+	- 预览组件需要到src/style/style.less中取消样式的注释，默认注释，不引用，防止把没用到的组件样式一起打包
+- 模板首页：http://localhost:9028/template-1/index/index.html
+	- 模板名称在src/route.js中定义
 
 ## 引用
 - 组件的引用
