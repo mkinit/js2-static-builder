@@ -1,0 +1,157 @@
+/*
+	公共样式
+*/
+
+/* 简易弹窗
+<div class="js2-modal">
+	<div class="modal-wrap">
+		<span class="modal-close" onclick="parentNode.parentNode.classList.remove('show')">关闭</span>
+		<div>这是一个简易的模态框</div>
+	</div>
+</div>
+<button class="js2-btn" onclick="document.querySelector('.js2-modal').classList.add('show')">显示模态框</button>
+*/
+.js2-modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.28);
+	display: none;
+	justify-content: center;
+	align-items: center;
+
+	&.show {
+		display: flex;
+	}
+
+	.modal-wrap {
+		background-color: #fff;
+		padding: calc(var(--base)*2.5) var(--base) var(--base);
+		position: relative;
+		border-radius:var(--radius);
+
+		.modal-close {
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: calc(var(--base)/2);
+			cursor: pointer;
+
+			&:hover {
+				color: var(--primary);
+			}
+		}
+	}
+}
+
+/* 表单样式 */
+.js2-form {
+	label {
+		display: block;
+		margin-bottom: var(--base);
+	}
+
+	input[type="text"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"] {
+		width: 180px;
+	}
+
+	textarea {
+		width: 360px;
+	}
+
+	.title {
+		display: inline-block;
+		min-width: 6em;
+		text-align: right;
+	}
+
+	.required {
+		color: var(--error);
+		position: relative;
+
+		&::before {
+			content: '*';
+		}
+	}
+}
+
+/* 透明容器 */
+.js2-transparent-box {
+	padding: var(--base) calc(var(--base) * 1.5);
+	margin: var(--base);
+	border-radius: 8px;
+	background-color: var(--rgba-white-28);
+}
+
+/* 普通按钮 */
+.js2-btn {
+	display: inline-block;
+	cursor: pointer;
+	color: var(--invert);
+	border-radius: 4px;
+	min-width: 6em;
+	padding: 0 var(--base);
+	text-align: center;
+	background-color: var(--primary);
+	line-height: calc(var(--base)*2.5);
+
+	&:hover {
+		color: var(--invert);
+		opacity: .82;
+	}
+}
+
+/* prism代码高亮样式覆盖 */
+div.code-toolbar>.toolbar {
+	right: 2.2em;
+}
+
+/* swiper容器样式覆盖 */
+.swiper-pagination-bullet {
+	background-color: var(--primary);
+	opacity: 1;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: var(--accent);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	width: unset;
+	height: unset;
+	color: var(--accent);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	font-size: 2em;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+	pointer-events: unset;
+}
+
+/* 覆盖layui样式 */
+.layui-icon {
+	line-height: 1;
+}
+
+.layui-icon-menu-fill,
+.layui-icon-close,
+.layui-icon-heart,
+.layui-icon-heart-fill {
+	cursor: pointer;
+}
+
+.layui-icon-heart,
+.layui-icon-heart-fill {
+	color: var(--error);
+}
