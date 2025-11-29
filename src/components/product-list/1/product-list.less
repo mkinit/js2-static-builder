@@ -8,14 +8,14 @@
 		li {
 			width: 22%;
 			margin: 0 1.5% 2em;
-			box-shadow: 0 0 6px lighten(@border, 10%);
+			box-shadow: 0 0 6px var(--border-second);
 			border-radius: .5em;
 			overflow: hidden;
 			transition: all .2s linear;
-			background-color: @invert;
+			background-color: var(--invert);
 
 			&:hover {
-				box-shadow: 0 0 6px @border;
+				box-shadow: 0 0 6px var(--border);
 			}
 
 			.thumbnail {

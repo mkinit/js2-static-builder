@@ -4,7 +4,7 @@
 	.form {
 		margin: 0 auto;
 		max-width:360px;
-		box-shadow: 0 0 5px @border;
+		box-shadow: 0 0 5px var(--border);
 		padding:2.5em 3em;
 		border-radius: 4px;
 		.item{
@@ -13,12 +13,12 @@
 			margin-bottom:1em;
 			border-radius: 4px;
 			overflow: hidden;
-			background-color: rgba(@border,.5);
+			background-color: rgba(var(--border),.5);
 			.input-title{
 				padding:0 .5em;
 			}
 			input{
-				background-color: @bg;
+				background-color: var(--bg);
 				border: none;
 				width: 100%;
 				line-height: 32px;

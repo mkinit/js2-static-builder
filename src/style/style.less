@@ -1,6 +1,19 @@
 //在样式入口文件引用的样式都会被打包到一起，单独打包页面的样式需要在页面的入口文件（页面的js）引用
 
-@import url('~@/style/var.less'); //页面使用变量前需要引用，除非是以下文件
 @import url('./reset.less'); //初始化样式
+
+:root {
+    --font-family: Microsoft Yahei; //字体
+    --bg: #f5f5f5; //背景
+    --border: #DDD; //边框
+    --border-second: #EFEFEF; //边框
+    --font: #555; //文字主色
+    --font-second: #999; //文字副色，浅色
+    --primary: #4183c4; //主色，用于链接、高亮
+    --secondary: #e73a74; //副色，一般用于hover
+    --invert: #FFF;
+}
+
 @import url('./nocss.less'); //公共样式
+
 //@import url('./demo.less'); //演示组件样式，正式打包按需引用

@@ -1,5 +1,5 @@
 .c-service-3 {
-	background-color: rgba(@font, .82);
+	background-color: rgba(var(--font), .82);
 
 	.items {
 		display: flex;
@@ -8,13 +8,13 @@
 
 		.item {
 			text-align: center;
-			color: @invert;
+			color: var(--invert);
 			font-size: 1.25em;
 			line-height: 1.8;
 
 			.icon {
 				width: 100px;
-				border: 1px solid @invert;
+				border: 1px solid var(--invert);
 				padding: 20px;
 				border-radius: 50%;
 				position: relative;
@@ -26,7 +26,7 @@
 					&::after {
 						width: 150px;
 						height: 150px;
-						box-shadow: 0 0 10px 10px @invert;
+						box-shadow: 0 0 10px 10px var(--invert);
 					}
 				}
 

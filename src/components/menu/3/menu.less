@@ -1,6 +1,6 @@
 .c-menu-3 {
 	transition: all .3s linear;
-	background-color: @invert;
+	background-color: var(--invert);
 
 	.dashicons {
 		width: unset;
@@ -42,7 +42,7 @@
 					display: block;
 					width: 0;
 					height: 2px;
-					background-color: @primary;
+					background-color: var(--primary);
 					position: absolute;
 					left: 50%;
 					transform: translateX(-50%);
@@ -82,7 +82,7 @@
 			}
 
 			.sub-menu {
-				background: @invert;
+				background: var(--invert);
 				display: none;
 				position: absolute;
 				z-index: 10;
@@ -90,11 +90,11 @@
 				top: 100%;
 				transform: translateX(-50%);
 				min-width: 8em;
-				box-shadow: 0 0 3px @border;
+				box-shadow: 0 0 3px var(--border);
 				font-size: .95em;
 
 				li {
-					border-bottom: 1px solid @bg;
+					border-bottom: 1px solid var(--bg);
 
 					&:last-child {
 						border-bottom: none;

@@ -5,11 +5,11 @@
 	bottom:10%;
 	width:44px;
 	.item{
-		background-color: @font;
-		box-shadow: 0 0 5px @border;
+		background-color: var(--font);
+		box-shadow: 0 0 5px var(--border);
 		margin:1px 0;
 		cursor: pointer;
-		color:@invert;
+		color:var(--invert);
 		white-space: nowrap;
 		transition: all .5s linear;
 		position:relative;
@@ -21,12 +21,12 @@
 			vertical-align: middle;
 		}
 		a{
-			color:@invert;
+			color:var(--invert);
 			display: flex;
 			align-items: center;
 		}
 		&:hover{
-			background-color: @primary;
+			background-color: var(--primary);
 		}
 		.text{
 			margin-left:8px;
@@ -45,15 +45,15 @@
 			}
 		}
 		.img-box{
-			border:1px solid @border;
+			border:1px solid var(--border);
 			width:150px;
 			position:absolute;
 			left:-150px;
 			bottom:0;
-			background-color: @invert;
+			background-color: var(--invert);
 			padding:10px;
 			text-align:center;
-			color:@font;
+			color:var(--font);
 			display: none;
 			flex-direction:column-reverse;
 			.text{
