@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin') //引用html处理插件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') //CSS分离（不分离时是通过js动态写入html里）
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin') //CSS演示压缩
 const SpritesmithPlugin = require('webpack-spritesmith') //雪碧图工具
 const { CleanWebpackPlugin } = require('clean-webpack-plugin') //引用打包清理插件
 const NODE_ENV = process.env.NODE_ENV; //环境变量
@@ -57,7 +58,8 @@ let plugins = [
             algorithm: 'top-down', // 从上到下生成方向.
             padding: 2 // 每个小图标之间的间隙
         }
-    })
+    }),
+    new OptimizeCssAssetsPlugin(),
 ]
 
 route.forEach(item => {
