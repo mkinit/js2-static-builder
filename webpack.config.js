@@ -17,7 +17,6 @@ const is_production = NODE_ENV === 'production' //判断是否生产环境
 let plugins = [
     new CleanWebpackPlugin(), //打包清理插件
     new MiniCssExtractPlugin({ //分离出入口样式文件
-        publicPath: '',
         filename: resource_path ? `${resource_path}/css/[name].[contenthash].css` : 'css/[name].[contenthash].css'
     }),
     new SpritesmithPlugin({ //生成雪碧图和样式
